@@ -30,7 +30,7 @@ def author_html(authors, mentees):
     mentees = {m.strip() for m in (mentees or "").split(";") if m.strip()}
     out = []
     for a in authors:
-        star = "*" in a
+        star = "*" in a.replace("**", "")  # ignore the **bold** markup
         plain = a.replace("**", "").replace("\\*", "").replace("*", "").strip()
         s = esc(plain)
         if plain == "Kephart JL":
