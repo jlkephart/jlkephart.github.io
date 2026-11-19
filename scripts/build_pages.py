@@ -37,7 +37,7 @@ def author_html(authors, mentees):
             s = f"<strong>{s}</strong>"
         elif plain in mentees:
             s = f'<span class="mentee">{s}</span>'
-        out.append(s + ("<sup>*</sup>" if star else ""))
+        out.append(s + ("<sup>&ast;</sup>" if star else ""))
     return ", ".join(out)
 
 
@@ -59,7 +59,7 @@ published = S.get("Peer-Reviewed Publications", [])
 review = S.get("Manuscripts Under Review", [])
 
 lines = [f'<p class="pub-legend"><strong>Kephart JL</strong> &middot; '
-         f'<span class="mentee">lab trainee</span> &middot; <sup>*</sup> co-first or co-senior author &middot; '
+         f'<span class="mentee">lab trainee</span> &middot; <sup>&ast;</sup> co-first or co-senior author &middot; '
          f'{len(published)} published, {len(review)} under review</p>']
 by_year = {}
 for p in published:
