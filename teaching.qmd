@@ -1,0 +1,5 @@
+---
+title: "Teaching"
+---
+
+{{< include _generated/teaching.md >}}

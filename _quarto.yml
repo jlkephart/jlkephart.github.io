@@ -17,6 +17,7 @@ website:
       - research.qmd
       - people.qmd
       - publications.qmd
+      - teaching.qmd
       - media.qmd
       - cv.qmd
   page-footer:

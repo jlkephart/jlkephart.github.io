@@ -128,6 +128,40 @@ for p in sorted(alumni, key=lambda x: x["date"], reverse=True):
     al.append(f"- **{esc(p['name'])}**, {esc(', '.join(bits))}{tail}")
 write("people_alumni.md", "\n".join(al))
 
+# ---------------------------------------------------------------- teaching
+def years_by_item(entries):
+    """Collapse repeat offerings: {'Course name': ['2026', '2023']} in first-seen order."""
+    out = {}
+    for e in entries:
+        out.setdefault(e["name"].strip(), []).append(str(e.get("date", "")))
+    return out
+
+
+courses = years_by_item(S.get("Teaching: Instructor of Record (Drexel University)", []))
+tl = ["## Courses\n", "*Dornsife School of Public Health, Drexel University*\n"]
+for name, yrs in courses.items():
+    title, _, detail = name.rpartition(", ") if "(" in name else (name, "", "")
+    yrs_s = ", ".join(sorted(set(yrs), reverse=True))
+    tl.append(f'<div class="course"><div class="course-title">{esc(title or name)}</div>'
+              f'<div class="course-meta">{esc(detail)} &middot; {yrs_s}</div></div>')
+
+workshops = S.get("Teaching: Workshops and other trainings", [])
+if workshops:
+    tl.append("\n## Workshops and trainings\n")
+    tl += [f"- {esc(e['name'])} ({e.get('date', '')})" for e in workshops]
+
+lectures = S.get("Teaching: Guest Lectures", [])
+if lectures:
+    tl.append("\n## Guest lectures\n")
+    tl += [f"- {esc(e['name'])} ({e.get('date', '')})" for e in lectures]
+
+ta = years_by_item(S.get("Teaching: Teaching Assistantships (Johns Hopkins)", []))
+if ta:
+    tl.append("\n## Teaching assistantships\n")
+    tl.append("*Johns Hopkins Bloomberg School of Public Health*\n")
+    tl += [f"- {esc(n)} ({', '.join(y)})" for n, y in ta.items()]
+write("teaching.md", "\n".join(tl))
+
 # ---------------------------------------------------------------- media
 media = []
 for e in S.get("Media and Research Dissemination", []):
