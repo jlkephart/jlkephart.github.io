@@ -77,10 +77,9 @@ write("recent_publications.md", recent)
 
 # ---------------------------------------------------------------- grants
 def grant_html(g):
-    cost = " ".join(g.get("highlights", []))
+    # Dollar amounts (the `highlights` field) stay in the CV PDF only, never on the website.
     return (f'<div class="grant"><div class="grant-title">{esc(g["name"])}</div>'
-            f'<div class="grant-meta">{esc(g.get("summary", ""))} {esc(g.get("date", ""))}'
-            f'{" &middot; " + esc(cost) if cost else ""}</div></div>')
+            f'<div class="grant-meta">{esc(g.get("summary", ""))} {esc(g.get("date", ""))}</div></div>')
 
 write("active_grants.md", "\n".join(grant_html(g) for g in S.get("Active Grants", [])))
 
