@@ -1,0 +1,31 @@
+project:
+  type: website
+  pre-render: python scripts/build_pages.py
+  resources:
+    - assets/
+  render:
+    - "*.qmd"
+
+website:
+  title: "LASH Lab"
+  site-url: https://jlkephart.github.io
+  description: "Climate, environment, and urban health research at Drexel University."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - research.qmd
+      - people.qmd
+      - publications.qmd
+      - media.qmd
+      - cv.qmd
+  page-footer:
+    left: "LASH Lab &middot; Dornsife School of Public Health, Drexel University"
+    right: "Built from the PI's CV &middot; updates automatically"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: false
+    page-layout: article

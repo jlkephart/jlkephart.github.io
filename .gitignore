@@ -1,0 +1,8 @@
+/.quarto/
+/_site/
+/_generated/
+/rendercv_output/
+assets/cv.pdf
+__pycache__/
+
+**/*.quarto_ipynb

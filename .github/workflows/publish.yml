@@ -1,0 +1,58 @@
+name: Build and publish site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 10 * * 1"   # weekly rebuild, Mondays
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install RenderCV and PyYAML
+        run: pip install "rendercv[full]" pyyaml
+
+      - name: Build CV PDF from cv.yml
+        run: |
+          rendercv render _data/cv.yml
+          mkdir -p assets
+          cp rendercv_output/*.pdf assets/cv.pdf
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Generate pages from cv.yml
+        run: python scripts/build_pages.py
+
+      - name: Render site
+        run: quarto render
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

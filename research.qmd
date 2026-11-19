@@ -1,0 +1,18 @@
+---
+title: "Research"
+---
+
+<!-- EDIT ME: research themes are hand-written; the funded projects list below updates from the CV. -->
+
+**Climate hazards and health in cities.** Heat, cold, floods, and other climate hazards and their effects on
+mortality and morbidity across hundreds of Latin American cities and U.S. settings.
+
+**Environmental health inequities.** Who is most exposed and most affected, from neighborhoods to whole
+populations, and which features of the urban environment drive those differences.
+
+**Air pollution, indoors and out.** Ambient air pollution in Latin American cities, and household air
+pollution and clean-cooking interventions.
+
+## Current funded projects
+
+{{< include _generated/active_grants.md >}}

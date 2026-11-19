@@ -1,0 +1,17 @@
+---
+title: "LASH Lab"
+subtitle: "Climate, environment, and urban health"
+---
+
+We study how climate hazards and environmental exposures (extreme heat, floods, and air pollution) shape health
+and health inequities in cities, with a focus on Latin America and Philadelphia. The lab is led by
+[Josiah L. Kephart, PhD, MPH](cv.qmd), Assistant Professor of Environmental and Occupational Health at the
+Dornsife School of Public Health, Drexel University, and Core Faculty at the Urban Health Collaborative.
+
+<!-- EDIT ME: replace the paragraph above with your own lab description. -->
+
+## Recent publications
+
+{{< include _generated/recent_publications.md >}}
+
+[All publications &rarr;](publications.qmd)
