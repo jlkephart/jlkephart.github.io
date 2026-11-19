@@ -5,6 +5,7 @@ project:
     - assets/
   render:
     - "*.qmd"
+    - "!people.qmd"   # hidden for now; to restore, delete this line and re-add people.qmd to the navbar
 
 website:
   title: "LASH Lab"
@@ -15,7 +16,6 @@ website:
       - href: index.qmd
         text: Home
       - research.qmd
-      - people.qmd
       - publications.qmd
       - teaching.qmd
       - media.qmd
