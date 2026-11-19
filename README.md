@@ -24,7 +24,7 @@ Hand-written text lives in `index.qmd` and `research.qmd`. Everything in `_gener
 
 ```
 pip install rendercv[full] pyyaml
-rendercv render _data/cv.yml && cp rendercv_output/*.pdf assets/cv.pdf
+rendercv render _data/cv.yml && cp _data/rendercv_output/*.pdf assets/cv.pdf
 python scripts/build_pages.py
 quarto preview
 ```

@@ -1,7 +1,7 @@
 /.quarto/
 /_site/
 /_generated/
-/rendercv_output/
+rendercv_output/
 assets/cv.pdf
 __pycache__/
 

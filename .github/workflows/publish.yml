@@ -33,7 +33,7 @@ jobs:
         run: |
           rendercv render _data/cv.yml
           mkdir -p assets
-          cp rendercv_output/*.pdf assets/cv.pdf
+          cp _data/rendercv_output/*.pdf assets/cv.pdf
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
