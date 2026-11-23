@@ -21,6 +21,10 @@ On every push to `main`, the GitHub Action in `.github/workflows/publish.yml`:
   - `not_mentees: "Surname I"` suppresses a wrong automatic match on that one paper.
   - The same rules (`scripts/trainees.py`) underline trainees in the CV PDF, via a generated copy
     `_build/cv.yml` that `scripts/prepare_pdf.py` writes. Keep `_data/cv.yml` free of Typst markup.
+  - The PDF's key line under "Peer-Reviewed Publications" comes from
+    `pdf_templates/classic/SectionBeginning.j2.typ`, an override of RenderCV's own template (RenderCV
+    checks `<theme>/` beside the CV file first). It is a copy of the 2.8 template plus the key, which is
+    why RenderCV is pinned to 2.8: when upgrading, re-copy the new built-in template and re-add the key.
 - `co_first_or_senior: "yes"` is set only when an author carries the `*` marker.
 - People page: anyone under the PI-led mentoring sections whose date ends in `present` is listed as a current
   member; everyone else is an alumnus. Edit `LAB_SECTIONS` in `scripts/build_pages.py` to change which sections count.
@@ -31,8 +35,8 @@ Hand-written text lives in `index.qmd` and `research.qmd`. Everything in `_gener
 
 ```
 pip install "rendercv[full]==2.8" pyyaml
-python scripts/prepare_pdf.py && rendercv render _build/cv.yml -nopdf -nopng -nomd -nohtml
-python scripts/finalize_pdf.py _build/rendercv_output/*.typ assets/cv.pdf
+python scripts/prepare_pdf.py && rendercv render _build/cv.yml -nopng -nomd -nohtml
+cp _build/rendercv_output/*.pdf assets/cv.pdf
 python scripts/build_pages.py
 quarto preview
 ```

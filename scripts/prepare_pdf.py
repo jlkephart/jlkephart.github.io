@@ -2,12 +2,13 @@
 
 - Underlines trainee authors (same rules as the website: scripts/trainees.py) using
   Typst's #underline[...], which RenderCV passes through unescaped.
-- Adds a one-line key explaining * and underlines as a temporary section named
-  KEY_SECTION; scripts/finalize_pdf.py later moves it under the Peer-Reviewed
-  Publications heading (RenderCV won't mix text into a publication section).
+- Copies pdf_templates/<theme>/ next to it. RenderCV looks for <theme>/<template> beside
+  the input file before using its built-in templates; our SectionBeginning override
+  prints the publication key under the Peer-Reviewed Publications heading.
 
 _data/cv.yml stays plain; never edit _build/ by hand.
 """
+import shutil
 from pathlib import Path
 
 import yaml
@@ -19,7 +20,6 @@ BUILD = ROOT / "_build"
 BUILD.mkdir(exist_ok=True)
 
 PUB_SECTIONS = ["Peer-Reviewed Publications", "Manuscripts Under Review"]
-KEY_SECTION = "PUBLICATIONKEYPLACEHOLDER"  # must match scripts/finalize_pdf.py
 
 data = yaml.safe_load((ROOT / "_data" / "cv.yml").read_text(encoding="utf-8"))
 S = data["cv"]["sections"]
@@ -39,17 +39,11 @@ for sec in PUB_SECTIONS:
             new.append(a)
         pub["authors"] = new
 
-# Key above the publication lists (RenderCV sections hold one entry type, so it gets its own heading).
-sections = {}
-for k, v in S.items():
-    if k == PUB_SECTIONS[0]:
-        sections[KEY_SECTION] = [
-            "\\* co-first or co-senior authorship; #underline[underlined] authors were mentored "
-            "scholars at the time of first submission."
-        ]
-    sections[k] = v
-data["cv"]["sections"] = sections
-
 (BUILD / "cv.yml").write_text(
     yaml.dump(data, allow_unicode=True, sort_keys=False, width=110), encoding="utf-8")
-print(f"prepare_pdf: underlined {n} trainee author entries -> _build/cv.yml")
+
+for theme_dir in (ROOT / "pdf_templates").iterdir():
+    if theme_dir.is_dir():
+        shutil.copytree(theme_dir, BUILD / theme_dir.name, dirs_exist_ok=True)
+
+print(f"prepare_pdf: underlined {n} trainee author entries -> _build/cv.yml (+ template overrides)")
