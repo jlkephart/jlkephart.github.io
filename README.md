@@ -30,8 +30,9 @@ Hand-written text lives in `index.qmd` and `research.qmd`. Everything in `_gener
 ## Preview locally
 
 ```
-pip install rendercv[full] pyyaml
-python scripts/prepare_pdf.py && rendercv render _build/cv.yml && cp _build/rendercv_output/*.pdf assets/cv.pdf
+pip install "rendercv[full]==2.8" pyyaml
+python scripts/prepare_pdf.py && rendercv render _build/cv.yml -nopdf -nopng -nomd -nohtml
+python scripts/finalize_pdf.py _build/rendercv_output/*.typ assets/cv.pdf
 python scripts/build_pages.py
 quarto preview
 ```

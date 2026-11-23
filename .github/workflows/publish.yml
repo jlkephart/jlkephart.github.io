@@ -27,14 +27,14 @@ jobs:
           python-version: "3.12"
 
       - name: Install RenderCV and PyYAML
-        run: pip install "rendercv[full]" pyyaml
+        # Pinned: scripts/finalize_pdf.py uses RenderCV internals. Test locally before bumping.
+        run: pip install "rendercv[full]==2.8" pyyaml
 
       - name: Build CV PDF from cv.yml
         run: |
           python scripts/prepare_pdf.py   # adds trainee underlines -> _build/cv.yml
-          rendercv render _build/cv.yml
-          mkdir -p assets
-          cp _build/rendercv_output/*.pdf assets/cv.pdf
+          rendercv render _build/cv.yml -nopdf -nopng -nomd -nohtml   # Typst source only
+          python scripts/finalize_pdf.py _build/rendercv_output/*.typ assets/cv.pdf
 
       - uses: quarto-dev/quarto-actions/setup@v2
 

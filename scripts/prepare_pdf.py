@@ -2,7 +2,9 @@
 
 - Underlines trainee authors (same rules as the website: scripts/trainees.py) using
   Typst's #underline[...], which RenderCV passes through unescaped.
-- Adds a one-line key above the publication lists explaining * and underlines.
+- Adds a one-line key explaining * and underlines as a temporary section named
+  KEY_SECTION; scripts/finalize_pdf.py later moves it under the Peer-Reviewed
+  Publications heading (RenderCV won't mix text into a publication section).
 
 _data/cv.yml stays plain; never edit _build/ by hand.
 """
@@ -17,6 +19,7 @@ BUILD = ROOT / "_build"
 BUILD.mkdir(exist_ok=True)
 
 PUB_SECTIONS = ["Peer-Reviewed Publications", "Manuscripts Under Review"]
+KEY_SECTION = "PUBLICATIONKEYPLACEHOLDER"  # must match scripts/finalize_pdf.py
 
 data = yaml.safe_load((ROOT / "_data" / "cv.yml").read_text(encoding="utf-8"))
 S = data["cv"]["sections"]
@@ -40,7 +43,7 @@ for sec in PUB_SECTIONS:
 sections = {}
 for k, v in S.items():
     if k == PUB_SECTIONS[0]:
-        sections["Publications"] = [
+        sections[KEY_SECTION] = [
             "\\* co-first or co-senior authorship; #underline[underlined] authors were mentored "
             "scholars at the time of first submission."
         ]
