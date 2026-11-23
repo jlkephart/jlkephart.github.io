@@ -4,7 +4,7 @@ title: "People"
 
 ## Principal investigator
 
-**Josiah L. Kephart, PhD, MPH, CPH.** Assistant Professor, Environmental and Occupational Health, Dornsife
+**Josiah L. Kephart, PhD, MPH.** Assistant Professor, Environmental and Occupational Health, Dornsife
 School of Public Health, Drexel University. [CV](cv.qmd)
 
 ## Current lab members

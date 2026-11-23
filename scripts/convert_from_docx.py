@@ -322,7 +322,7 @@ cv_sections = year_ints(cv_sections)
 cv = {
     "cv": {
         "name": "Josiah L. Kephart",
-        "headline": "PhD, MPH, CPH. Assistant Professor, Environmental and Occupational Health, "
+        "headline": "PhD, MPH. Assistant Professor, Environmental and Occupational Health, "
                     "Dornsife School of Public Health, Drexel University",
         "location": "Philadelphia, PA",
         "email": "jlk465@drexel.edu",
