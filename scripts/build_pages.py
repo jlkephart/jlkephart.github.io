@@ -3,13 +3,13 @@
 Runs as a Quarto pre-render step. Writes Markdown into _generated/, which the
 .qmd pages pull in with {{< include >}}. Never edit _generated/ by hand.
 """
-import datetime
 import html
 import re
-import unicodedata
 from pathlib import Path
 
 import yaml
+
+from trainees import mentored_people, plain_author, trainees
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_generated"
@@ -28,60 +28,7 @@ def esc(s):
 
 
 # ---------------------------------------------------------------- trainees
-# A publication author is underlined as a trainee when EITHER
-#   (a) they are listed in the entry's `mentees` field, OR
-#   (b) they match someone in any "Mentoring: ..." CV section (same surname, same first
-#       initial) whose mentoring years cover the paper: publication year within
-#       [start, end + 1] (submission precedes publication), or, for manuscripts under
-#       review, a mentoring period that includes the current year or ended last year.
-# To stop an automatic match on one paper, add `not_mentees: "Surname I"` to that entry.
-THIS_YEAR = datetime.date.today().year
-
-
-def norm(s):
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[\s\-]+", " ", s).strip()
-
-
-def plain_author(a):
-    return a.replace("**", "").replace("\\*", "").replace("*", "").strip()
-
-
-MENTORED = []  # (normalized full name, start year, end year)
-for _sec, _entries in S.items():
-    if not _sec.startswith("Mentoring"):
-        continue
-    for _e in _entries:
-        _yrs = re.findall(r"\d{4}", str(_e.get("date", "")))
-        if not _yrs:
-            continue
-        _end = 9999 if "present" in str(_e.get("date", "")) else int(_yrs[-1])
-        _full = re.split(r"[.,]", _e["name"], maxsplit=1)[0]
-        MENTORED.append((norm(_full), int(_yrs[0]), _end))
-
-
-def is_mentored(author, year):
-    m = re.match(r"^(.*\S)\s+([A-Z][A-Za-z\-]{0,3})$", plain_author(author))
-    if not m:
-        return False
-    sur, ini = norm(m.group(1)), m.group(2)[0].lower()
-    for full, start, end in MENTORED:
-        if full.endswith(" " + sur) and full[0] == ini:
-            if year is None and end >= THIS_YEAR - 1:
-                return True
-            if year is not None and start <= year <= end + 1:
-                return True
-    return False
-
-
-def split_names(field):
-    return {m.strip() for m in (field or "").split(";") if m.strip()}
-
-
-def trainees(p):
-    year = int(p["date"]) if str(p.get("date", "")).isdigit() else None
-    auto = {plain_author(a) for a in p["authors"] if is_mentored(a, year)}
-    return (split_names(p.get("mentees")) | auto) - split_names(p.get("not_mentees"))
+PEOPLE = mentored_people(S)  # rules live in scripts/trainees.py (shared with the PDF build)
 
 
 # ---------------------------------------------------------------- publications
@@ -109,7 +56,7 @@ def pub_html(p):
     meta = f"<em>{venue}</em>" + (f" ({year})" if year else "")
     extra = f'<div class="pub-note">{esc(p["summary"])}</div>' if p.get("summary") else ""
     return (f'<div class="pub"><div class="pub-title">{t}</div>'
-            f'<div class="pub-authors">{author_html(p["authors"], trainees(p))}</div>'
+            f'<div class="pub-authors">{author_html(p["authors"], trainees(p, PEOPLE))}</div>'
             f'<div class="pub-venue">{meta}</div>{extra}</div>')
 
 

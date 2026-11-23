@@ -31,9 +31,10 @@ jobs:
 
       - name: Build CV PDF from cv.yml
         run: |
-          rendercv render _data/cv.yml
+          python scripts/prepare_pdf.py   # adds trainee underlines -> _build/cv.yml
+          rendercv render _build/cv.yml
           mkdir -p assets
-          cp _data/rendercv_output/*.pdf assets/cv.pdf
+          cp _build/rendercv_output/*.pdf assets/cv.pdf
 
       - uses: quarto-dev/quarto-actions/setup@v2
 

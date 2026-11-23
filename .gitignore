@@ -6,3 +6,4 @@ assets/cv.pdf
 __pycache__/
 
 **/*.quarto_ipynb
+/_build/

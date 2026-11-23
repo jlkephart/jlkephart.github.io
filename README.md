@@ -19,6 +19,8 @@ On every push to `main`, the GitHub Action in `.github/workflows/publish.yml`:
   Add someone to the Mentoring sections and their papers update on the next build.
   - `mentees: "Surname I"` forces an underline the automatic match misses.
   - `not_mentees: "Surname I"` suppresses a wrong automatic match on that one paper.
+  - The same rules (`scripts/trainees.py`) underline trainees in the CV PDF, via a generated copy
+    `_build/cv.yml` that `scripts/prepare_pdf.py` writes. Keep `_data/cv.yml` free of Typst markup.
 - `co_first_or_senior: "yes"` is set only when an author carries the `*` marker.
 - People page: anyone under the PI-led mentoring sections whose date ends in `present` is listed as a current
   member; everyone else is an alumnus. Edit `LAB_SECTIONS` in `scripts/build_pages.py` to change which sections count.
@@ -29,7 +31,7 @@ Hand-written text lives in `index.qmd` and `research.qmd`. Everything in `_gener
 
 ```
 pip install rendercv[full] pyyaml
-rendercv render _data/cv.yml && cp _data/rendercv_output/*.pdf assets/cv.pdf
+python scripts/prepare_pdf.py && rendercv render _build/cv.yml && cp _build/rendercv_output/*.pdf assets/cv.pdf
 python scripts/build_pages.py
 quarto preview
 ```
