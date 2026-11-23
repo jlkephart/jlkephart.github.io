@@ -158,7 +158,11 @@ taught = S.get(T_CLASS, []) + S.get(T_SHORT, [])
 courses = years_by_item([e for e in taught if is_drexel(e)])  # the website lists Drexel courses
 tl = ["## Courses\n", "*Dornsife School of Public Health, Drexel University*\n"]
 for name, yrs in courses.items():
-    title, _, detail = name.rpartition(", ") if "(" in name else (name, "", "")
+    if ", " in name.split(" (")[0]:      # 'Title, EOH 642 (3 credits)' / 'Title, Summer Institute (15 hrs)'
+        title, _, detail = name.rpartition(", ")
+    else:                                # 'Title (Master's-level independent study; 1 student)'
+        p = re.match(r"^(.*?) \((.*)\)$", name)
+        title, detail = p.groups() if p else (name, "")
     yrs_s = ", ".join(sorted(set(yrs), reverse=True))
     tl.append(f'<div class="course"><div class="course-title">{esc(title or name)}</div>'
               f'<div class="course-meta">{esc(detail)} &middot; {yrs_s}</div></div>')

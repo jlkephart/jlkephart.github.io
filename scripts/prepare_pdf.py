@@ -140,8 +140,9 @@ def year_span(years):
 
 
 def course_text(name):
-    """'Healthy Housing & Built Environment, EOH 642 (3 credits)' -> 'EOH 642: Healthy Housing ... (3 credits)'."""
-    m = re.match(r"^(.*), ([A-Z]{2,4} \d{3}) \((.+)\)$", name)
+    """'Healthy Housing & Built Environment, EOH 642 (3 credits)' -> 'EOH 642: Healthy Housing ... (3 credits)';
+    'Designing Healthy Homes, Independent Study (3 credits; ...)' -> 'Independent Study: Designing ...'."""
+    m = re.match(r"^(.*), ([A-Z]{2,4} \d{3}|Independent Study) \((.+)\)$", name)
     return f"{m.group(2)}: {m.group(1)} ({m.group(3)})" if m else name
 
 
@@ -186,8 +187,14 @@ if EXP in S:
 DATE_LEFT = ("Editorial and Review Activities", "Presentations", "Honors and Awards",
              "Professional Activities", "Media and Research Dissemination", "Academic Service",
              "Community Service", "Skills and Certifications")
+def bold_outlet(text):
+    """Media entries start with the outlet ('Philadelphia Inquirer. Title...'): bold it."""
+    outlet, sep, rest = text.partition(". ")
+    return f"**{outlet}**{sep}{rest}" if sep else text
+
+
 for sec in [k for k in S if k.startswith(DATE_LEFT)]:
-    S[sec] = date_left(S[sec])
+    S[sec] = date_left(S[sec], bold_outlet if sec == "Media and Research Dissemination" else (lambda n: n))
 
 # Numbered citation-style entries, newest first (1 = most recent); each section restarts at 1.
 for sec in PUB_SECTIONS:
