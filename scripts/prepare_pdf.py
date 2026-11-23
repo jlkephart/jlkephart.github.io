@@ -10,6 +10,7 @@
 - Groups Teaching entries under institution sub-headings, merging repeat offerings' years,
   and lays out the other list sections (see DATE_LEFT), plus Education and Experience,
   date-left, with `group` or `institution` sub-headings.
+- Turns "Group: Sub" section names into a group heading printed once plus sub-headings.
 - Copies pdf_templates/<theme>/ next to it. RenderCV looks for <theme>/<template> beside
   the input file before using its built-in templates; our SectionBeginning override
   prints the publication key under the Peer-Reviewed Publications heading.
@@ -190,6 +191,29 @@ for sec in [k for k in S if k.startswith(DATE_LEFT)]:
 for sec in PUB_SECTIONS:
     if sec in S:
         S[sec] = [{"number": citation(p)} for p in S[sec]]
+
+# Two heading levels. RenderCV has one, so cv.yml names grouped sections "Group: Sub". Here the
+# first section of each run of a group becomes "Group ⟫ Sub" and the rest "Group › Sub";
+# SectionBeginning.j2.typ prints the large group heading once, then a smaller sub-heading.
+GROUP_START, GROUP_NEXT = " ⟫ ", " › "  # must match SectionBeginning.j2.typ
+PDF_GROUPS = {  # sections the website reads by these exact names, grouped in the PDF only
+    "Peer-Reviewed Publications": "Publications: Peer-Reviewed Publications",
+    "Manuscripts Under Review": "Publications: Manuscripts Under Review",
+    "Briefs and Outreach": "Publications: Briefs and Outreach",
+    "Media and Research Dissemination": "Publications: Media and Research Dissemination",
+    "Active Grants": "Research Grant Participation: Active",
+    "Completed Grants": "Research Grant Participation: Completed",
+}
+renamed, prev = {}, None
+for key, entries in S.items():
+    group, sep, sub = PDF_GROUPS.get(key, key).partition(": ")
+    if sep:
+        key = group + (GROUP_NEXT if group == prev else GROUP_START) + sub
+        prev = group
+    else:
+        key, prev = group, None
+    renamed[key] = entries
+data["cv"]["sections"] = renamed
 
 (BUILD / "cv.yml").write_text(
     yaml.dump(data, allow_unicode=True, sort_keys=False, width=110), encoding="utf-8")
