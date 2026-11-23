@@ -2,6 +2,11 @@
 # Migrated from KephartJ_CV_2026-09.docx on 2026-11-19. Edit this file, not the .docx.
 # Publication extras used by the website: `mentees` (underlined trainee authors),
 # `co_first_or_senior`. Names in **bold** are Kephart JL.
+# Mentoring sections are by role (a person can appear in several). Entries: `name` (with optional
+# credential), `date`, and optional `fellowship` (shown in parentheses), `program`, `with`
+# (co-advisor), `affiliation`, `thesis` (thesis title), `position` (current position) and `award`
+# (written as a sentence, e.g. "Awarded the ... Award"). `lab_role` puts the person on the
+# website People page with that label.
 
 cv:
   name: Josiah L. Kephart
@@ -1006,573 +1011,6 @@ cv:
     - bullet: Diez Roux AV, Bilal U, Kephart JL, Barrientos-Gutierrez T, Caiaffa W, Diez Canseco F, Rodriguez D,
         Sarmiento OL, Slesinski C, Vives Vergara A. COVID-19 and Urban Health in Latin America and the Caribbean.
         SALURBAL Special Data Brief No. 1. June 2021.
-    Active Grants:
-    - name: South Philadelphia Climate Resilience and Preparedness Initiative
-      date: 03/01/2026-02/28/2028
-      summary: William Penn Foundation. Drexel Environmental Collaboratory & Southeast Asian Mutual Assistance Association
-        Coalition (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $318,000'
-    - name: 'Youth in Urban Centres across the Americas (YUCA): Understanding and addressing heat impacts on mental
-        health (322204/Z/24/Z)'
-      date: 06/01/2026-05/31/2031
-      summary: Wellcome Trust (Climate and Mental Health Award). Kephart, Co-PI. (Augustinavicius, Lead PI).
-      highlights:
-      - 'Total costs: $3,869,602'
-    - name: Temperature-related mortality in U.S. state prisons (R01AG092826)
-      date: 02/15/2026-01/31/2031
-      summary: National Institutes of Health, NIA. Jahn, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $2,465,709'
-    - name: Climate change and urban health in Latin America (SALURBAL-Climate; 227810/Z/23/Z)
-      date: 11/01/2023-10/30/2028
-      summary: Wellcome Trust. Diez Roux & Sarmiento, MPI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $7,199,308'
-    - name: Urban Inequality & Spatial Distribution of Heat Mortality in Brazilian Cities (227978/Z/23/Z)
-      date: 11/01/2023-10/30/2026
-      summary: Wellcome Trust (Climate Impact Awards). Bilal, Sub-PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $3,810,000'
-    Completed Grants:
-    - name: Urban heat and healthcare utilization among people with chronic kidney disease
-      date: 09/01/2025-05/30/2026
-      summary: Drexel CCUH (Pilot Award). Kephart, PI.
-      highlights:
-      - 'Total costs: $30,300'
-    - name: Drexel Climate Change and Urban Health Research Center (Drexel CCUH) (P20MD019221)
-      date: 09/23/2023-05/30/2026
-      summary: National Institutes of Health, NIMHD. Diez Roux, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $3,205,772'
-    - name: Catalyzing Systemic Change at Drexel University to Support Diverse Faculty in Health Disparities Research
-        (Faculty Institutional Recruitment for Sustainable Transformation; U54CA267735)
-      date: 09/21/2021-03/21/2025
-      summary: National Institutes of Health, NCI. Diez Roux & Gitlin, MPI. (Kephart, FIRST faculty).
-      highlights:
-      - 'Total costs: $14,391,741'
-    - name: Climate change, built environment and health in informal settlements in Colombia
-      date: 12/01/2022-06/30/2024
-      summary: Lacuna Fund (Climate and Health Award). Quistberg, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $300,034'
-    - name: What makes cities healthy, equitable and environmentally sustainable? Lessons from Latin America (05177/Z/16/Z)
-      date: 04/01/2017-10/30/2023
-      summary: Wellcome Trust (Our Planet Our Health). Diez Roux, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $12,191,632'
-    - name: Climate Change and Health Equity Working Group (Urban Health Collaborative Working Group Funding Award)
-      date: 04/01/2022-03/31/2023
-      summary: Drexel Urban Health Collaborative. Kephart, PI.
-      highlights:
-      - 'Total costs: $15,000'
-    - name: The impacts of climate-related extreme flood events on health and health disparities in Latin American
-        cities (Cotswold Foundation Postdoctoral Fellowship)
-      date: 01/01/2022-12/31/2022
-      summary: Cotswold Foundation. Kephart, PI.
-      highlights:
-      - 'Total costs: $50,000'
-    - name: Green spaces and climate-related mortality in Latin American cities (206029/Z/19/Z)
-      date: 10/01/2019-09/30/2022
-      summary: Wellcome Trust (Climate Change and Health Award). Rodríguez, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $96,751'
-    - name: 'Evaluating LPG consumption behavior: identifying and testing conservation strategies to maximize affordability
-        and sustainability of exclusive LPG use (Clean Cooking Implementation Science Network Award)'
-      date: 2018-2019
-      summary: National Institutes of Health, FIC. Checkley, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $115,000'
-    - name: Ruth L. Kirschstein Institutional National Research Service Award, 5T32ES007141-33
-      date: 2018-2019
-      summary: National Institutes of Health, NIEHS. Wills-Karp, PI. (Kephart, Pre-doctoral student).
-    - name: Nitrogen dioxide in household air pollution from biomass and gas cookstoves (Field Research Award)
-      date: 2018-2019
-      summary: Johns Hopkins Center for Global Health. Kephart, PI.
-      highlights:
-      - 'Total costs: $3,500'
-    - name: Addressing health system barriers to evidence-based asthma care in peri-urban Peru
-      date: 2018
-      summary: Johns Hopkins Alliance for a Healthier World. Pollard, PI. (Kephart, Co-Investigator).
-      highlights:
-      - 'Total costs: $24,950'
-    - name: The role of nitrogen dioxide in household air pollution from biomass and gas cookstoves (Fogarty Global
-        Health Fellowship; D43 TW009340)
-      date: 2017-2018
-      summary: National Institutes of Health, NIEHS/FIC. Kephart, Pre-doctoral Fellow.
-    - name: Global Established Multidisciplinary Site Student Award
-      date: 2017
-      summary: Johns Hopkins Center for Global Health. Kephart, Awardee.
-      highlights:
-      - 'Total costs: $3,000'
-    - name: Ruth L. Kirschstein Institutional National Research Service Award, 5T32ES007141-33
-      date: 2016-2017
-      summary: National Institutes of Health, NIEHS. Wills-Karp M, P.I. (Kephart, Pre-doctoral student).
-    - name: Global Established Multidisciplinary Site Student Award
-      date: 2016
-      summary: Johns Hopkins Center for Global Health. Kephart, Awardee.
-      highlights:
-      - 'Total costs: $3,000'
-    'Professional Activities: Society Membership':
-    - name: Society for Epidemiologic Research
-      date: 2021-present
-    - name: International Society for Urban Health
-      date: 2021-present
-    - name: International Society for Environmental Epidemiology
-      date: 2018-present
-    - name: Delta Omega National Public Health Honorary Society
-      date: 2013-present
-    - name: American Public Health Association
-      date: 2012-present
-    - name: American Association of Geographers
-      date: 2011-2015
-    'Professional Activities: Other Professional Activities':
-    - name: IPCC Special Report on Climate Change and Cities, Expert reviewer
-      date: 2025
-    - name: ISEE-North America Chapter mentoring program, Lead mentor
-      date: 2025-present
-    - name: Informed Population Health Opinions (INPHO) survey, Panelist
-      date: 2022-present
-    'Editorial and Review Activities: External Grant Review':
-    - name: Invited reviewer, National Institutes of Health, PDAH study section
-      date: 2026
-    - name: Community Resilience and Environmental Justice Fund, City of Philadelphia
-      date: 2026
-    'Editorial and Review Activities: Peer Review Activities, Journal Editorial Board':
-    - name: Mladá Veda (Young Science), Editorial Board Member
-      date: 2026-present
-    'Editorial and Review Activities: Peer Review Activities, Journal Reviewer':
-    - Age and Ageing, American Journal of Preventive Medicine, Applied Sciences, British Medical Journal (BMJ),
-      Energy Research & Social Science, Environment International, Environmental Health Perspectives, Environmental
-      Research, GeoHealth, Health and Place, Heart, Indoor Air, International Journal of Biometeorology, International
-      Journal of Environmental Research and Public Health, Journal of Exposure Science and Environmental Epidemiology,
-      Journal of Occupational and Environmental Hygiene, Journal of Urban Health, The Lancet Global Health, The
-      Lancet Planetary Health, Nature Aging, Nature Medicine, Nature Cities, One Earth, PLOS ONE, Science Advances,
-      Scientific Reports, Urban Climate
-    'Editorial and Review Activities: Review of Abstracts for Scientific Meetings':
-    - name: International Society for Environmental Epidemiology Annual Meeting
-      date: 2021-2026
-    - name: Society for Epidemiologic Research Annual Meeting
-      date: 2022
-    'Editorial and Review Activities: Intramural Review (Drexel University)':
-    - name: Admissions Committee, Urban Epidemiology Fellowship, Philadelphia Department of Public Health/Drexel
-        Urban Health Collaborative
-      date: 2026
-    - name: Publications and Proposals Review Committee, SALURBAL Project
-      date: 2021-2025
-    - name: Doctoral Fellowship reviewer, Urban Health Collaborative
-      date: 2022, 2024
-    - name: Judge, Drexel University School of Biomedical Sciences and Professional Studies Discovery Day
-      date: 2019
-    'Teaching: Instructor of Record (Drexel University)':
-    - name: Evidence-Based Interventions for Climate Change and Urban Health, Summer Institute (15 hrs)
-      date: 2026
-    - name: Healthy Housing & Built Environment, EOH 642 (3 credits)
-      date: 2026
-    - name: Climate Change for Urban Health Researchers, Summer Institute (15 hrs)
-      date: 2025
-    - name: The Public Health Impacts of Global Climate Change, EOH 657 (3 credits)
-      date: 2025
-    - name: Climate Change for Urban Health Researchers, Summer Institute (15 hrs)
-      date: 2024
-    - name: The Public Health Impacts of Global Climate Change, EOH 657 (3 credits)
-      date: 2024
-    - name: Healthy Housing & Built Environment, EOH 642 (3 credits)
-      date: 2023
-    'Teaching: Guest Lectures':
-    - name: 'Digital screen use and youth mental health: Who is to blame? Advanced Topics in Epidemiologic History,
-        Theory, and Biases, Drexel University'
-      date: 2026
-    - name: 'Environmental health inequities and solutions. Health Disparities: Systemic, Structural, Environmental,
-        and Economic, Drexel University'
-      date: 2026
-    - name: Youth mental health and the commercial determinants of health, Advanced Topics in Epidemiologic History,
-        Theory, and Biases, Drexel University
-      date: 2026
-    - name: The public health burden of ambient and household air pollution. Burden of Disease, Drexel University
-      date: 2026
-    - name: The global burden of climate change impacts on health. Burden of Disease, Drexel University
-      date: 2025
-    - name: Urban heat and mortality in a time of climate change and population aging. Professional Seminar for
-        the Executive MPH Program, Drexel University
-      date: 2024
-    - name: Climate change and health disparities at global and local levels. Social Epidemiology, Drexel University
-      date: 2024
-    - name: Climate change, air pollution, and the commercial determinants of health, Advanced Topics in Epidemiologic
-        History, Theory, and Biases, Drexel University
-      date: 2023
-    - name: The commercial determinants of health, Advanced Topics in Epidemiologic History, Theory, and Biases,
-        Drexel University
-      date: 2021
-    - name: Challenges and opportunities in global environmental health, Rouse Honors Seminar, Howard Community
-        College
-      date: 2019
-    - name: Data visualization for environmental data, Methods in the Exposure Sciences, Johns Hopkins Bloomberg
-        School of Public Health
-      date: 2018
-    'Teaching: Workshops and other trainings':
-    - name: Advanced analysis of climate-health impacts. Drexel Climate Change and Urban Health Research Center
-        Workshop. Mexico City, Mexico
-      date: 2024
-    - name: How to create an NIH Biosketch. Public Health Doctoral Student Advisory Group Workshop, Drexel University
-      date: 2024
-    - name: 'Modeling the health impacts of time-varying climate factors: heat and mortality. Urban Health in Latin
-        America Conference, Mexico City, Mexico'
-      date: 2023
-    'Teaching: Teaching Assistantships (Johns Hopkins)':
-    - name: Exposure Assessment Techniques for Health Risk Management
-      date: 2019
-    - name: Methods in the Exposure Sciences
-      date: 2018
-    - name: Spatial Statistics
-      date: 2017
-    - name: The Global Environment, Climate Change, & Public Health
-      date: 2016
-    - name: Spatial Analysis for Public Health
-      date: 2016
-    - name: Spatial Data Technologies for Mapping
-      date: 2016
-    'Mentoring: Postdoctoral Fellow':
-    - name: 'Hanna Jardel, PhD. Current position: Fellow at NIH/NIEHS'
-      date: 2024-2025
-    'Mentoring: Doctoral Primary Advisor':
-    - name: 'Annaka Scheeres, Program: PhD in Environmental and Occupational Health, Dornsife School of Public Health,
-        Drexel University'
-      date: 2025-present
-    'Mentoring: Doctoral Thesis Committee Member – Drexel University':
-    - name: 'Juan Carlos Figueroa, Program: PhD in Epidemiology, Dornsife School of Public Health'
-      date: 2026-present
-    - name: 'Hal Chen, Program: PhD in Biostatistics, Dornsife School of Public Health,'
-      date: 2026-present
-    - name: 'Diana Higuera, Program: PhD in Epidemiology, Dornsife School of Public Health'
-      date: 2024-present
-    - name: 'Shreya Patel, Program: PhD in Epidemiology, Dornsife School of Public Health'
-      date: 2024-2026
-    - name: 'Ana Lucía Peralta, Program: PhD in Epidemiology, Dornsife School of Public Health'
-      date: 2024-present
-    - name: 'Lisa Frueh, Program: PhD in Environmental and Occupational Health, Dornsife School of Public Health'
-      date: 2023-present
-    'Mentoring: Doctoral Thesis Committee Member - External':
-    - name: 'Jaime Reyes Sanchez, Program: PhD in Epidemiology, University of Southern California'
-      date: 2024-2026
-    - name: 'Celia Minerva Jimenez Ortiz, Program: PhD in Epidemiology, Instituto Nacional de Salud Pública, México'
-      date: 2023-2026
-    - name: 'Karla Fabiola Rangel Moreno, Program: PhD in Epidemiology, Instituto Nacional de Salud Pública, México'
-      date: 2021-2025
-    'Mentoring: Doctoral Preliminary Oral Exam Member':
-    - name: 'Hal Chen, Program: PhD in Biostatistics, Dornsife School of Public Health, Drexel University'
-      date: 2026
-    - name: 'Diana Higuera, Program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University'
-      date: 2024
-    - name: 'Ana Lucía Peralta, Program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University'
-      date: 2024
-    - name: 'Jaime Reyes Sanchez, Program: PhD in Epidemiology, University of Southern California'
-      date: 2024
-    - name: 'Shreya Patel, Program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University'
-      date: 2024
-    - name: 'Lisa Frueh, Program: PhD in Environmental and Occupational Health, Dornsife School of Public Health,
-        Drexel University'
-      date: 2024
-    'Mentoring: Advisees (Master)':
-    - name: 'Vedantika Mohile. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2026-present
-    - name: 'Emma Palitz. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2024-2026
-    - name: 'Leslie Howze. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2024-2026
-    - name: 'Angela Tung. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2024-2026
-    - name: 'Stacy Lamitie-Swain. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2023-2025
-    - name: 'Dohaa Ansari. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2023-2024
-    - name: 'Lidiize Perez. Program: MPH in Urban Health, Dornsife School of Public Health, Drexel University.'
-      date: 2023-2024
-    - name: 'Jalayna Antoine. Program: MPH in Environmental and Occupational Health, Dornsife School of Public Health,
-        Drexel University.'
-      date: 2023-2024
-    'Mentoring: Master’s Applied Practical Experience (APE) Preceptor/Supervisor':
-    - name: 'Victoria Rodríguez, Program: MPH in Environmental and Occupational Health, Dornsife School of Public
-        Health, Drexel University.'
-      date: 2025
-    'Mentoring: Master’s Thesis Committee (External)':
-    - name: 'Maria Jolly, Program: MSPH in Environmental Health, Rollins School of Public Health, Emory University'
-      date: 2017-2018
-    'Mentoring: Graduate Research Fellows or Research Assistants':
-    - name: 'Paula Garcia, Dornsife Public Health Fellow. Program: MPH in Epidemiology, Dornsife School of Public
-        Health, Drexel University'
-      date: 2025-present
-    - name: 'Juan Carlos Figueroa. Program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University'
-      date: 2024-present
-    - name: 'Allora Atiyeh. Dornsife Public Health Fellow. Program: MPH in Health Management and Policy, Dornsife
-        School of Public Health, Drexel University'
-      date: 2024-2026
-    - name: 'Andrea Jaffe. Urban Health Collaborative Fellow. Program: MPH in Epidemiology, Dornsife School of Public
-        Health, Drexel University'
-      date: 2023-2025
-    - name: 'Emily Shingara. Program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University'
-      date: 2023-2024
-    - name: 'Cassandra Stuart. Program: MPH/MBA, Drexel University.'
-      date: 2022-2023
-    'Mentoring: Masters Research mentees':
-    - name: 'Gary Malpartida Guzmán, BS. Program: MS in Environmental Health, Universidad Peruana Cayetano Heredia
-        (Lima, Peru)'
-      date: 2020-2022
-    - name: 'Maria Jolly, BS. Program: MS in Public Health, Emory University. Current position: Project Manager
-        (CDC)'
-      date: 2017-2018
-    - name: 'Ariadne Villegas, BA. Program: MS in Public Health, Johns Hopkins University. Current position: Research
-        Associate (Public Health Institute)'
-      date: 2017-2018
-    - name: 'Lena Stashko, BS. Program: MS in Public Health, Johns Hopkins University. Current position: Senior
-        Global Health Consultant (Sassenach Inc.)'
-      date: 2017-2018
-    - name: 'Abigail Winiker, BA. Program: MS in Public Health, Johns Hopkins University. Current position: PhD
-        student (Johns Hopkins University)'
-      date: 2017-2018
-    - name: 'Dina Goodman, BA. Program: MS in Public Health, Johns Hopkins University. Current position: PhD candidate
-        (Harvard University)'
-      date: 2016-2017
-    - name: 'Elizabeth Fung, BS. Program: MS in Public Health, Johns Hopkins University. Current position: Medical
-        student (University of California at Davis)'
-      date: 2016-2017
-    'Mentoring: Undergraduate Research Assistants':
-    - name: 'Balsam Adam. Program: BA in Global Public Health, Drexel University'
-      date: 2026-present
-    'Mentoring: Undergraduate Research mentees':
-    - name: 'Tim Shade. Program: BA in International Studies, Johns Hopkins University'
-      date: 2017-2019
-    - name: 'Alexander Lee. Program: BS in Biology, Howard University'
-      date: 2017-2018
-    - name: 'Saachi Nangia. Program: BS in Biology, Johns Hopkins University'
-      date: 2016-2017
-    'Mentoring: International Society for Environmental Epidemiology (ISEE) Early Career Mentees':
-    - name: Jing Wang. PhD student, Harvard University
-      date: 2025-2026
-    - name: Yiqun Ma, Postdoctoral Fellow, UCSD
-      date: 2025-2026
-    - name: Devon Nenon, PhD student, London School of Hygiene & Tropical Medicine
-      date: 2025-2026
-    - name: Nafisa Islam, PhD candidate, University of Rochester
-      date: 2025-2026
-    - name: Nelum Hapuhinna, Assistant Professor, Northern Kentucky University
-      date: 2025-2026
-    'Mentoring: Climate Change and Urban Health in Latin America (SALURBAL-Climate) Mentorship Program':
-    - name: Yuquan Zhou, Postdoctoral Fellow, UC Berkeley
-      date: 2026-present
-    - name: Jinwen Xu, Postdoctoral Fellow, UC Berkeley
-      date: 2024-2026
-    'Mentoring: 100,000 Strong In the Americas Fellow, U.S. Dept. of State & Colombia Ministry of Science':
-    - name: Manuela Valenzuela Vieda, MD
-      date: 2024
-    'Mentoring: MPH Alumni Program mentees, Johns Hopkins Bloomberg School of Public Health':
-    - name: Cusi Ferradas, MPH
-      date: 2018
-    - name: Takako Kanakubo, MPH
-      date: 2017
-    'Presentations: Session Chair (or equivalent) at Scientific Meetings':
-    - name: Emerging climate-health threats in Latin American cities (Symposium Organizer and Chair). International
-        Society for Environmental Epidemiology (ISEE), Munich, Germany.
-      date: 2026
-    - name: Outdoor and Indoor Air Pollution. (Session Chair). International Society for Environmental Epidemiology
-        North America Chapter (ISEE-NAC), Baltimore, MD.
-      date: 2026
-    - name: Climate change and health across the lifespan in urban Latin America (Symposium Organizer and Chair).
-        International Society for Environmental Epidemiology (ISEE), Atlanta, GA.
-      date: 2025
-    - name: 'Haze hazards: long-term exposure to air pollution and chronic health effects. (Session Chair). International
-        Society for Environmental Epidemiology (ISEE), Santiago, Chile.'
-      date: 2024
-    - name: Climate and temperature and health (Session Chair). International Society for Environmental Epidemiology
-        (ISEE), Virtual meeting.
-      date: 2021
-    'Presentations: Presentations at Scientific Meetings (Invited Keynote/Plenary Speaker)':
-    - name: A Multi-country Analysis of Floods and Mortality in 1,374 Latin American Municipalities, with Modification
-        by Age and Sex. (Plenary Speaker). American Geophysical Union (AGU) & American Meteorological Society (AMS)
-        GeoHealth Showcase. Virtual.
-      date: 2026
-    - name: 'Urban Design as a Public Health Intervention: Reducing Heat Mortality in the Americas. (Plenary Speaker).
-        7th International Smart and Health Cities Symposium. UNESCO Chair/Thomas Jefferson University, Philadelphia.'
-      date: 2026
-    - name: Disentangling climate hazards from demographic change in climate–health projections. (Keynote Speaker).
-        Climate Change, Environmental Hazards, and Population Dynamics Conference. Max Planck Institute for Demographic
-        Research. Rostock, Germany.
-      date: 2025
-    - name: 'Climate change, mobility, and health: lessons from Latin American cities. (Plenary Speaker). The 82
-        Alliance Mobility Conference. Philadelphia, PA.'
-      date: 2024
-    - name: Global environmental health challenges and opportunities for early career researchers. (Plenary Speaker).
-        NIH/NIEHS Global Environmental Health Day, Research Triangle Park, NC
-      date: 2018
-    'Presentations: Presentations at Scientific Meetings (Oral Presentations)':
-    - name: A multi-country study of the mortality effects of compound exposures to short-term heat and air pollution
-        in urban Latin America. (Oral presentation). International Society for Environmental Epidemiology (ISEE).
-        Munich, Germany.
-      date: 2026
-    - name: Neighborhood heterogeneity in heat-mortality impacts across the Americas. NIH Health and Extreme Weather
-        Science Symposium. (Oral presentation). NIAID/NIH, Rockville, MD.
-      date: 2026
-    - name: A Multi-country Analysis of Floods and Mortality in 1,374 Latin American Municipalities, with Modification
-        by Age, Sex, and Features of the Urban Environment. (Oral presentation). American Geophysical Union (AGU)
-        Meeting. New Orleans, LA.
-      date: 2025
-    - name: Heterogeneity in heat-related mortality between neighborhoods in five cities of the Americas. (Oral
-        presentation). International Society for Environmental Epidemiology (ISEE). Atlanta, GA.
-      date: 2025
-    - name: Temperature-related mortality in nine Latin American countries under climate change and population scenarios.
-        (Oral presentation). International Society for Environmental Epidemiology (ISEE). Santiago, Chile.
-      date: 2024
-    - name: 'Climate change and urban health in Latin America: The SALURBAL-Climate Project. (Oral presentation).
-        CAFÉ Climate and Health Conference. Virtual meeting.'
-      date: 2024
-    - name: Six years of the Urban Health in Latin America Project. (Panel discussion). International Conference
-        on Urban Health (ICUH). Atlanta, GA.
-      date: 2023
-    - name: Social disparities in flood exposure and associations with the built environment in 49,233 urban neighborhoods
-        in eight Latin American countries (Moderated Discussion). International Society for Environmental Epidemiology
-        (ISEE). Kaohsiung, Taiwan.
-      date: 2023
-    - name: Extreme temperatures and health in Latin American cities (Oral Presentation). International Conference
-        on Urban Health (ICUH), Virtual meeting.
-      date: 2021
-    - name: The impact of mobility on COVID-19 incidence and disparities at the sub-city level in 314 Latin American
-        cities (Oral Presentation). Society for Epidemiologic Research (SER), Virtual meeting.
-      date: 2021
-    - name: Energy transitions for household air pollution (Oral Presentation). Primary Air Care Symposium, Johns
-        Hopkins University, Baltimore, MD
-      date: 2019
-    - name: Household air pollution reductions in the Cardiopulmonary Outcomes and Household Air Pollution trial
-        (Oral Presentation). Global Non-Communicable Diseases Symposium, Johns Hopkins School of Medicine, Baltimore,
-        MD
-      date: 2018
-    - name: 'Indoor NO2 in homes with biomass cookstoves before and after a gas stove intervention: preliminary
-        results (Oral Presentation). Joint Meeting of the International Society of Exposure Science (ISES) and the
-        International Society for Environmental Epidemiology (ISEE), Ottawa, Canada'
-      date: 2018
-    - name: The GEOHealth program in Peru, with preliminary results from a project on clean cookstoves (Oral Presentation).
-        Joint Meeting of the International Society of Exposure Science (ISES) and the International Society for
-        Environmental Epidemiology (ISEE), Ottawa, Canada
-      date: 2018
-    - name: Preliminary results of environmental assessments in the CHAP study (Oral Presentation). Global Non-Communicable
-        Diseases Symposium, Johns Hopkins School of Medicine, Baltimore, MD
-      date: 2017
-    'Presentations: Invited Seminars/Presentations':
-    - name: Neighborhood heterogeneity in heat mortality across the Americas. Extreme Weather and Urban Health Webinar
-        Series. Drexel Research Center on Extreme Weather and Urban Health. Drexel University, Philadelphia, PA
-      date: 2026
-    - name: 'Hotter Cities, Older Populations: Understanding and Responding to Converging Challenges in the 21st
-        Century. CCEB & DEBI Epidemiology Seminar Series. University of Pennsylvania, Philadelphia, PA.'
-      date: 2026
-    - name: Heat vulnerability within Philadelphia neighborhoods. City of Philadelphia Environmental Justice and
-        Community Resilience Working Group. Philadelphia.
-      date: 2025
-    - name: Interventions to reduce the health impacts of extreme heat in Rio de Janeiro. City of Rio de Janeiro
-        Department of Public Health. Virtual.
-      date: 2025
-    - name: Urban heat and public health from an environmental justice lens. Esperanza, community-based organization.
-        Philadelphia, PA.
-      date: 2025
-    - name: Extreme heat from a public health perspective. Philadelphia Climate Justice Collective Town Hall. Philadelphia,
-        PA.
-      date: 2025
-    - name: Future heat-related mortality in Latin American under climate change and aging scenarios. Environmental
-        and Occupational Health Flash Talk Series. Drexel University, Philadelphia, PA.
-      date: 2025
-    - name: The impacts of floods on mortality in Latin American cities. Urban Health Collaborative Weekly Forum,
-        Drexel University, Philadelphia, PA..
-      date: 2025
-    - name: Extreme temperatures and mortality in Latin American cities. Colombia National Ministry of Health. Virtual.
-      date: 2024
-    - name: 'Urban heat and mortality in a time of climate change and population aging: lessons from Latin American
-        cities. John Ruffin Health Disparities Seminar Series, National Institute on Aging, NIH, Baltimore, MD.'
-      date: 2024
-    - name: Air quality, health, and inequities in Latin American cities. Webinar series on Cleaner Air Through
-        Better Places. World Health Organization.
-      date: 2024
-    - name: Leveraging Open Access & Online Interactive Applications to Disseminate Urban Health Research. Drexel
-        University Libraries Open Access Week. Philadelphia, PA.
-      date: 2023
-    - name: Cambio climático y disparidades de salud en cuidades latinoamericanas [Climate change and health disparities
-        in Latin American cities]. Center for Population Health Research Seminar Series, National Institute of Public
-        Health (Mexico), Mexico City, Mexico.
-      date: 2023
-    - name: Social disparities in flood exposures in Latin American cities. Urban Health Collaborative Weekly Forum,
-        Drexel University, Philadelphia, PA.
-      date: 2023
-    - name: 'Modeling the health impacts of time-varying climate factors: heat and mortality. Workshop at the 2023
-        Urban Health in Latin America Meeting. Mexico City, Mexico.'
-      date: 2023
-    - name: 'Climate change and health equity: extreme temperatures and mortality in highly urbanized Latin America.
-        Department of Epidemiology, Biostatistics, and Occupational Health Seminar Series. McGill University, Montreal,
-        Canada.'
-      date: 2023
-    - name: Global Climate Change and Health Equity in Cities. Urban Health Collaborative Weekly Forum, Drexel University,
-        Philadelphia, PA.
-      date: 2023
-    - name: 'Climate Change and Health Equity: Confronting Current and Future Environmental Health Disparities.
-        Department of Environmental and Occupational Health, Drexel University, Philadelphia, PA'
-      date: 2022
-    - name: Understanding the impacts of climate disasters on health disparities. Urban Health Collaborative Weekly
-        Forum, Drexel University, Philadelphia, PA
-      date: 2022
-    - name: 'Improving environments to reduce health disparities: air pollution, extreme heat, and COVID-19 lockdowns
-        in Latin America. Department of Environmental and Occupational Health Research Seminar, Drexel University,
-        Philadelphia, PA'
-      date: 2021
-    - name: 'Extreme heat and mortality: evidence from 326 Latin American cities. Climate Change and Health panel,
-        Climate Year Speaker Series. Drexel University, Philadelphia, PA.'
-      date: 2021
-    - name: 'Household air pollution: an exposure of inequity. Urban Health Collaborative Seminar, Drexel University,
-        Philadelphia, PA'
-      date: 2020
-    - name: COVID-19 and air pollution in Latin American cities. Urban Health Collaborative Seminar, Drexel University,
-        Philadelphia, PA
-      date: 2020
-    - name: COVID-19, air pollution, and health inequities in Latin American cities. Latin America and the Caribbean
-        Urban Health Webinar Series, Drexel University, Philadelphia, PA
-      date: 2020
-    - name: Nitrogen dioxide exposures from biomass and gas cookstoves. Department of Environmental Health and Engineering
-        Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD
-      date: 2019
-    - name: Nitrogen dioxide and household air pollution from biomass and liquefied petroleum gas cookstoves. Department
-        of Environmental Health and Engineering Doctoral Thesis Defense, Johns Hopkins University, Baltimore, MD
-      date: 2019
-    - name: The role of nitrogen dioxide in household air pollution from biomass and gas cookstoves. Department
-        of Environmental Health and Engineering Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD
-      date: 2018
-    - name: Effect of a clean cookstove intervention on household air pollutants in Puno, Peru. Department of Environmental
-        Health and Engineering Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD
-      date: 2016
-    'Presentations: (Selected) Poster Presentations at Scientific Meetings':
-    - name: Kephart JL, Bakhtsiyarava M, Sanchez BN, Arunachalam S, Gouveia N, Dronova I, Schinasi L, Bilal U, Caiaffa
-        WT, Jaffe A, Diez Roux AV, Rodriguez DA. Temperature-related mortality in Latin American cities under climate
-        change and population aging scenarios. (Poster). NIH Faculty Institutional Recruitment for Sustainable Transformation
-        (FIRST) Program Annual Grantees Conference, Bethesda, MD.
-      date: 2024
-    - name: Kephart JL, Bilal U, Gouveia N, Rodriguez DA, Alfaro T, Texcalac JL, Miranda JJ, Diez Roux AV. Ambient
-        nitrogen dioxide exposures in Latin American cities. (Poster). International Society for Environmental Epidemiology
-        (ISEE), Athens, Greece.
-      date: 2022
-    - name: Kephart JL, Sánchez B, Moore J, Schinasi LH, Delclòs-Alió X, Bakhtsiyarava M, Gouveia N, Caiaffa WT,
-        Dronova I, Arunachalam S, Diez Roux AV, Rodríguez DA. Extreme temperatures and mortality in 326 Latin American
-        cities (Poster). International Society for Environmental Epidemiology (ISEE), Virtual meeting.
-      date: 2021
-    - name: Kephart JL, Avila-Palencia I, Bilal U, Gouveia N, Caiaffa WT, Diez Roux AV. COVID-19, ambient air pollution,
-        and environmental health inequities in Latin American cities (Poster). International Society for Environmental
-        Epidemiology (ISEE), Virtual meeting.
-      date: 2020
-    - name: Kephart JL, Fandiño-del-Rio M, Checkley W, Koehler K. Exposure misclassification from area sampling
-        in epidemiologic studies of cookstove emissions (Poster). International Society for Environmental Epidemiology
-        (ISEE), Utrecht, The Netherlands.
-      date: 2019
-    - name: Kephart JL, Using Free Statistical Computing Tools for Public Health Data Analysis in Resource-Limited
-        Settings (Poster). Global Environmental and Occupational Health (GEOHealth) Network Meeting, National Institutes
-        of Health, Bethesda, MD
-      date: 2017
-    - name: Kephart JL, Kirk GD, Mehta SH. Spatial patterns of initial drug use among intravenous drug users in
-        Baltimore, MD (Poster). Geographic Information Systems Day, Johns Hopkins Bloomberg School of Public Health,
-        Baltimore, MD
-      date: 2014
     Media and Research Dissemination:
     - name: The Nation’s Health (APHA). Playing it safe with fumes from gas stoves. Primary expert for public-facing
         one-pager on health risks from gas stoves. May 24. https://www.thenationshealth.org/sites/default/files/additional-assets/healthyyou/HealthyYouMay24_GasStoves.pdf
@@ -1639,35 +1077,724 @@ cv:
         in Latin America]. Article in major Argentine news outlet summarizing Kephart et al. (2021, The Lancet Digital
         Health). Aug 30. https://www.infobae.com/america/tendencias-america/2021/08/30/the-lancet-analizo-la-relacion-entre-la-movilidad-urbana-y-los-contagios-en-314-ciudades-de-america-latina/
       date: 2021
-    'Academic Service: Drexel University':
+    Active Grants:
+    - name: South Philadelphia Climate Resilience and Preparedness Initiative
+      date: 03/01/2026-02/28/2028
+      funder: William Penn Foundation
+      investigators: Drexel Environmental Collaboratory & Southeast Asian Mutual Assistance Association Coalition (Kephart,
+        Co-Investigator)
+      total_costs: $318,000
+    - name: 'Youth in Urban Centres across the Americas (YUCA): Understanding and addressing heat impacts on mental
+        health (322204/Z/24/Z)'
+      date: 06/01/2026-05/31/2031
+      funder: Wellcome Trust (Climate and Mental Health Award)
+      investigators: Augustinavicius, Lead PI (Kephart, Co-PI)
+      total_costs: $3,869,602
+    - name: Temperature-related mortality in U.S. state prisons (R01AG092826)
+      date: 02/15/2026-01/31/2031
+      funder: National Institutes of Health, NIA
+      investigators: Jahn, PI (Kephart, Co-Investigator)
+      total_costs: $2,927,905
+    - name: Climate change and urban health in Latin America (SALURBAL-Climate; 227810/Z/23/Z)
+      date: 11/01/2023-10/30/2028
+      funder: Wellcome Trust
+      investigators: Diez Roux & Sarmiento, MPI (Kephart, Co-Investigator)
+      total_costs: $7,199,308
+    - name: Urban Inequality & Spatial Distribution of Heat Mortality in Brazilian Cities (227978/Z/23/Z)
+      date: 11/01/2023-10/30/2026
+      funder: Wellcome Trust (Climate Impact Awards)
+      investigators: Bilal, Sub-PI (Kephart, Co-Investigator)
+      total_costs: $3,810,000
+    Completed Grants:
+    - name: Urban heat and healthcare utilization among people with chronic kidney disease
+      date: 09/01/2025-05/30/2026
+      funder: Drexel CCUH (Pilot Award)
+      investigators: Kephart, PI
+      total_costs: $30,300
+    - name: Drexel Climate Change and Urban Health Research Center (Drexel CCUH) (P20MD019221)
+      date: 09/23/2023-05/30/2026
+      funder: National Institutes of Health, NIMHD
+      investigators: Diez Roux, PI (Kephart, Co-Investigator)
+      total_costs: $3,205,772
+    - name: Catalyzing Systemic Change at Drexel University to Support Diverse Faculty in Health Disparities Research
+        (Faculty Institutional Recruitment for Sustainable Transformation; U54CA267735)
+      date: 09/21/2021-03/21/2025
+      funder: National Institutes of Health, NCI
+      investigators: Diez Roux & Gitlin, MPI (Kephart, FIRST faculty)
+      total_costs: $14,391,741
+    - name: Climate change, built environment and health in informal settlements in Colombia
+      date: 12/01/2022-06/30/2024
+      funder: Lacuna Fund (Climate and Health Award)
+      investigators: Quistberg, PI (Kephart, Co-Investigator)
+      total_costs: $300,034
+    - name: What makes cities healthy, equitable and environmentally sustainable? Lessons from Latin America (05177/Z/16/Z)
+      date: 04/01/2017-10/30/2023
+      funder: Wellcome Trust (Our Planet Our Health)
+      investigators: Diez Roux, PI (Kephart, Co-Investigator)
+      total_costs: $12,191,632
+    - name: Climate Change and Health Equity Working Group (Urban Health Collaborative Working Group Funding Award)
+      date: 04/01/2022-03/31/2023
+      funder: Drexel Urban Health Collaborative
+      investigators: Kephart, PI
+      total_costs: $15,000
+    - name: The impacts of climate-related extreme flood events on health and health disparities in Latin American cities
+        (Cotswold Foundation Postdoctoral Fellowship)
+      date: 01/01/2022-12/31/2022
+      funder: Cotswold Foundation
+      investigators: Kephart, PI
+      total_costs: $50,000
+    - name: Green spaces and climate-related mortality in Latin American cities (206029/Z/19/Z)
+      date: 10/01/2019-09/30/2022
+      funder: Wellcome Trust (Climate Change and Health Award)
+      investigators: Rodríguez, PI (Kephart, Co-Investigator)
+      total_costs: $96,751
+    - name: 'Evaluating LPG consumption behavior: identifying and testing conservation strategies to maximize affordability
+        and sustainability of exclusive LPG use (Clean Cooking Implementation Science Network Award)'
+      date: 2018-2019
+      funder: National Institutes of Health, FIC
+      investigators: Checkley, PI (Kephart, Co-Investigator)
+      total_costs: $115,000
+    - name: Ruth L. Kirschstein Institutional National Research Service Award, 5T32ES007141-33
+      date: 2018-2019
+      funder: National Institutes of Health, NIEHS
+      investigators: Wills-Karp, PI (Kephart, Pre-doctoral student)
+    - name: Nitrogen dioxide in household air pollution from biomass and gas cookstoves (Field Research Award)
+      date: 2018-2019
+      funder: Johns Hopkins Center for Global Health
+      investigators: Kephart, PI
+      total_costs: $3,500
+    - name: Addressing health system barriers to evidence-based asthma care in peri-urban Peru
+      date: 2018
+      funder: Johns Hopkins Alliance for a Healthier World
+      investigators: Pollard, PI (Kephart, Co-Investigator)
+      total_costs: $24,950
+    - name: The role of nitrogen dioxide in household air pollution from biomass and gas cookstoves (Fogarty Global
+        Health Fellowship; D43 TW009340)
+      date: 2017-2018
+      funder: National Institutes of Health, NIEHS/FIC
+      investigators: Kephart, Pre-doctoral Fellow
+    - name: Global Established Multidisciplinary Site Student Award
+      date: 2017
+      funder: Johns Hopkins Center for Global Health
+      investigators: Kephart, Awardee
+      total_costs: $3,000
+    - name: Ruth L. Kirschstein Institutional National Research Service Award, 5T32ES007141-33
+      date: 2016-2017
+      funder: National Institutes of Health, NIEHS
+      investigators: Wills-Karp, PI (Kephart, Pre-doctoral student)
+    - name: Global Established Multidisciplinary Site Student Award
+      date: 2016
+      funder: Johns Hopkins Center for Global Health
+      investigators: Kephart, Awardee
+      total_costs: $3,000
+    'Professional Activities: Society Membership':
+    - name: Society for Epidemiologic Research
+      date: 2021-present
+    - name: International Society for Urban Health
+      date: 2021-present
+    - name: International Society for Environmental Epidemiology
+      date: 2018-present
+    - name: Delta Omega National Public Health Honorary Society
+      date: 2013-present
+    - name: American Public Health Association
+      date: 2012-present
+    - name: American Association of Geographers
+      date: 2011-2015
+    'Professional Activities: Other Professional Activities':
+    - name: IPCC Special Report on Climate Change and Cities, Expert reviewer
+      date: 2025
+    - name: ISEE-North America Chapter mentoring program, Lead mentor
+      date: 2025-present
+    - name: Informed Population Health Opinions (INPHO) survey, Panelist
+      date: 2022-present
+    'Editorial and Review Activities: Peer Review Activities. Journal Editorial Boards':
+    - name: Mladá Veda (Young Science), Editorial Board Member
+      date: 2026-present
+    'Editorial and Review Activities: Peer Review Activities. Grant Proposal or Fellowship Applicant Reviewer':
+    - name: Invited reviewer, National Institutes of Health, PDAH study section
+      date: 2026
+      group: Extramural
+    - name: Community Resilience and Environmental Justice Fund, City of Philadelphia
+      date: 2026
+      group: Extramural
+    - name: Admissions Committee, Urban Epidemiology Fellowship, Philadelphia Department of Public Health/Drexel Urban
+        Health Collaborative
+      date: 2026
+      group: Intramural (Drexel University)
+    - name: Publications and Proposals Review Committee, SALURBAL Project
+      date: 2021-present
+      group: Intramural (Drexel University)
+    - name: Doctoral Fellowship reviewer, Urban Health Collaborative
+      date: 2022, 2024
+      group: Intramural (Drexel University)
+    - name: Judge, Drexel University School of Biomedical Sciences and Professional Studies Discovery Day
+      date: 2019
+      group: Intramural (Drexel University)
+    'Editorial and Review Activities: Peer Review Activities. Journal Reviewer':
+    - Age and Ageing, American Journal of Preventive Medicine, Applied Sciences, British Medical Journal (BMJ), Energy
+      Research & Social Science, Environment International, Environmental Health Perspectives, Environmental Research,
+      GeoHealth, Health and Place, Heart, Indoor Air, International Journal of Biometeorology, International Journal
+      of Environmental Research and Public Health, Journal of Exposure Science and Environmental Epidemiology, Journal
+      of Occupational and Environmental Hygiene, Journal of Urban Health, The Lancet Global Health, The Lancet Planetary
+      Health, Nature Aging, Nature Medicine, Nature Cities, One Earth, PLOS ONE, Science Advances, Scientific Reports,
+      Urban Climate
+    'Editorial and Review Activities: Review of Abstracts for Scientific Meetings':
+    - name: International Society for Environmental Epidemiology Annual Meeting
+      date: 2021-2026
+    - name: Society for Epidemiologic Research Annual Meeting
+      date: 2022
+    'Mentoring: Postdoctoral Fellows':
+    - name: Hanna Jardel, PhD
+      date: 2024-2025
+      position: Fellow at NIH/NIEHS
+      lab_role: Postdoctoral fellow
+    'Mentoring: Advisees (Doctoral)':
+    - name: Annaka Scheeres
+      date: 2025-present
+      program: PhD in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+      lab_role: PhD student
+    'Mentoring: Advisees (Master)':
+    - name: Vedantika Mohile
+      date: 2026-present
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Emma Palitz
+      date: 2024-2026
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Leslie Howze
+      date: 2024-2026
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Angela Tung
+      date: 2024-2026
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Stacy Lamitie-Swain
+      date: 2023-2025
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Dohaa Ansari
+      date: 2023-2024
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Lidiize Perez
+      date: 2023-2024
+      program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    - name: Jalayna Antoine
+      date: 2023-2024
+      program: MPH in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH advisee
+    'Mentoring: Doctoral Thesis Advisory Committee Member':
+    - name: Juan Carlos Figueroa
+      date: 2026-present
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Hal Chen
+      date: 2026-present
+      program: PhD in Biostatistics, Dornsife School of Public Health, Drexel University
+    - name: Diana Higuera
+      date: 2024-present
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Ana Lucía Peralta
+      date: 2024-present
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Shreya Patel
+      date: 2024-2026
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Jaime Reyes Sanchez
+      date: 2024-2026
+      program: PhD in Epidemiology, University of Southern California
+    - name: Lisa Frueh
+      date: 2023-present
+      program: PhD in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+    - name: Celia Minerva Jimenez Ortiz
+      date: 2023-2026
+      program: PhD in Epidemiology, Instituto Nacional de Salud Pública, México
+    - name: Karla Fabiola Rangel Moreno
+      date: 2021-2025
+      program: PhD in Epidemiology, Instituto Nacional de Salud Pública, México
+    'Mentoring: Doctoral Preliminary Oral Exam Member':
+    - name: Hal Chen
+      date: 2026
+      program: PhD in Biostatistics, Dornsife School of Public Health, Drexel University
+    - name: Diana Higuera
+      date: 2024
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Ana Lucía Peralta
+      date: 2024
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Jaime Reyes Sanchez
+      date: 2024
+      program: PhD in Epidemiology, University of Southern California
+    - name: Shreya Patel
+      date: 2024
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+    - name: Lisa Frueh
+      date: 2024
+      program: PhD in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+    'Mentoring: Master Research Advisor/Supervisor':
+    - name: Victoria Rodríguez
+      date: 2025
+      fellowship: APE practicum
+      program: MPH in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+      lab_role: MPH practicum student
+    - name: Gary Malpartida Guzmán, BS
+      date: 2020-2022
+      program: MS in Environmental Health, Universidad Peruana Cayetano Heredia (Lima, Peru)
+    - name: Maria Jolly, BS
+      date: 2017-2018
+      program: MS in Public Health, Emory University
+      position: Project Manager (CDC)
+    - name: Ariadne Villegas, BA
+      date: 2017-2018
+      program: MS in Public Health, Johns Hopkins University
+      position: Research Associate (Public Health Institute)
+    - name: Lena Stashko, BS
+      date: 2017-2018
+      program: MS in Public Health, Johns Hopkins University
+      position: Senior Global Health Consultant (Sassenach Inc.)
+    - name: Abigail Winiker, BA
+      date: 2017-2018
+      program: MS in Public Health, Johns Hopkins University
+      position: PhD student (Johns Hopkins University)
+    - name: Dina Goodman, BA
+      date: 2016-2017
+      program: MS in Public Health, Johns Hopkins University
+      position: PhD candidate (Harvard University)
+    - name: Elizabeth Fung, BS
+      date: 2016-2017
+      program: MS in Public Health, Johns Hopkins University
+      position: Medical student (University of California at Davis)
+    'Mentoring: Graduate Research Assistants or Research Fellows':
+    - name: Paula Garcia
+      date: 2025-present
+      fellowship: Dornsife Public Health Fellow
+      program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University
+      lab_role: Graduate research assistant
+    - name: Juan Carlos Figueroa
+      date: 2024-2026
+      program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+      lab_role: Graduate research assistant
+    - name: Allora Atiyeh
+      date: 2024-2026
+      fellowship: Dornsife Public Health Fellow
+      program: MPH in Health Management and Policy, Dornsife School of Public Health, Drexel University
+      lab_role: Graduate research assistant
+    - name: Andrea Jaffe
+      date: 2023-2025
+      fellowship: Urban Health Collaborative Fellow
+      program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University
+      lab_role: Graduate research assistant
+    - name: Emily Shingara
+      date: 2023-2024
+      program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University
+      lab_role: Graduate research assistant
+    - name: Cassandra Stuart
+      date: 2022-2023
+      program: MPH/MBA, Drexel University
+      lab_role: Graduate research assistant
+    'Mentoring: Thesis Reader':
+    - name: Maria Jolly
+      date: 2017-2018
+      program: MSPH in Environmental Health, Rollins School of Public Health, Emory University
+    'Mentoring: Undergraduate Research Supervisor':
+    - name: Balsam Adam
+      date: 2026-present
+      fellowship: Research Assistant
+      program: BA in Global Public Health, Drexel University
+      lab_role: Undergraduate research assistant
+    - name: Tim Shade
+      date: 2017-2019
+      program: BA in International Studies, Johns Hopkins University
+    - name: Alexander Lee
+      date: 2017-2018
+      program: BS in Biology, Howard University
+    - name: Saachi Nangia
+      date: 2016-2017
+      program: BS in Biology, Johns Hopkins University
+    'Mentoring: Other mentored fellows':
+    - name: Yuquan Zhou
+      date: 2026-present
+      fellowship: SALURBAL-Climate Mentorship Program
+      affiliation: Postdoctoral Fellow, UC Berkeley
+    - name: Cara Smith
+      date: 2026-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: Postdoctoral Fellow, University of Washington
+    - name: Erin Burman
+      date: 2026-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD student, Harvard T.H. Chan School of Public Health
+    - name: Elizabeth Peebles
+      date: 2026-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: Master’s student, Harvard T.H. Chan School of Public Health
+    - name: Ruby Hickman
+      date: 2026-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD student, Harvard T.H. Chan School of Public Health
+    - name: Katelin Teigen
+      date: 2026-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD student, University of Washington
+    - name: Nelum Hapuhinna
+      date: 2025-present
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: Assistant Professor, Northern Kentucky University
+    - name: Jing Wang
+      date: 2025-2026
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD student, Harvard University
+    - name: Yiqun Ma
+      date: 2025-2026
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: Postdoctoral Fellow, UCSD
+    - name: Devon Nenon
+      date: 2025-2026
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD student, London School of Hygiene & Tropical Medicine
+    - name: Nafisa Islam
+      date: 2025-2026
+      fellowship: ISEE Early Career Mentoring Program
+      affiliation: PhD candidate, University of Rochester
+    - name: Jinwen Xu
+      date: 2024-2026
+      fellowship: SALURBAL-Climate Mentorship Program
+      affiliation: Postdoctoral Fellow, UC Berkeley
+    - name: Manuela Valenzuela Vieda, MD
+      date: 2024
+      fellowship: 100,000 Strong in the Americas Fellow, U.S. Dept. of State & Colombia Ministry of Science
+    - name: Cusi Ferradas, MPH
+      date: 2018
+      fellowship: MPH Alumni Program, Johns Hopkins Bloomberg School of Public Health
+    - name: Takako Kanakubo, MPH
+      date: 2017
+      fellowship: MPH Alumni Program, Johns Hopkins Bloomberg School of Public Health
+    'Teaching: Classroom Instruction (Instructor or Course Director)':
+    - name: Healthy Housing & Built Environment, EOH 642 (3 credits)
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: The Public Health Impacts of Global Climate Change, EOH 657 (3 credits)
+      date: 2025
+      institution: Drexel University, Philadelphia, PA
+    - name: The Public Health Impacts of Global Climate Change, EOH 657 (3 credits)
+      date: 2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Healthy Housing & Built Environment, EOH 642 (3 credits)
+      date: 2023
+      institution: Drexel University, Philadelphia, PA
+    'Teaching: Short Courses (Instructor or Course Director)':
+    - name: Evidence-Based Interventions for Climate Change and Urban Health, Summer Institute (15 hrs)
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: Climate Change for Urban Health Researchers, Summer Institute (15 hrs)
+      date: 2025
+      institution: Drexel University, Philadelphia, PA
+    - name: Climate Change for Urban Health Researchers, Summer Institute (15 hrs)
+      date: 2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Advanced analysis of climate-health impacts. Drexel Climate Change and Urban Health Research Center Workshop
+      date: 2024
+      institution: Urban Health in Latin America (SALURBAL) Conference, Mexico City, Mexico
+    - name: 'Modeling the health impacts of time-varying climate factors: heat and mortality. Workshop'
+      date: 2023
+      institution: Urban Health in Latin America (SALURBAL) Conference, Mexico City, Mexico
+    'Teaching: Guest Lecturing':
+    - name: 'Digital screen use and youth mental health: Who is to blame? Advanced Topics in Epidemiologic History,
+        Theory, and Biases'
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: 'Environmental health inequities and solutions. Health Disparities: Systemic, Structural, Environmental,
+        and Economic'
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: Youth mental health and the commercial determinants of health, Advanced Topics in Epidemiologic History,
+        Theory, and Biases
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: The public health burden of ambient and household air pollution. Burden of Disease
+      date: 2026
+      institution: Drexel University, Philadelphia, PA
+    - name: The global burden of climate change impacts on health. Burden of Disease
+      date: 2025
+      institution: Drexel University, Philadelphia, PA
+    - name: Urban heat and mortality in a time of climate change and population aging. Professional Seminar for the
+        Executive MPH Program
+      date: 2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Climate change and health disparities at global and local levels. Social Epidemiology
+      date: 2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Climate change, air pollution, and the commercial determinants of health, Advanced Topics in Epidemiologic
+        History, Theory, and Biases
+      date: 2023
+      institution: Drexel University, Philadelphia, PA
+    - name: The commercial determinants of health, Advanced Topics in Epidemiologic History, Theory, and Biases
+      date: 2021
+      institution: Drexel University, Philadelphia, PA
+    - name: Challenges and opportunities in global environmental health, Rouse Honors Seminar
+      date: 2019
+      institution: Howard Community College, Columbia, MD
+    - name: Data visualization for environmental data, Methods in the Exposure Sciences
+      date: 2018
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    'Teaching: Other Significant Teaching (Informal Talks, Teaching Assistant, Laboratory Instructor)':
+    - name: How to create an NIH Biosketch. Public Health Doctoral Student Advisory Group Workshop
+      date: 2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Exposure Assessment Techniques for Health Risk Management, Teaching Assistant
+      date: 2019
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    - name: Methods in the Exposure Sciences, Teaching Assistant
+      date: 2018
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    - name: Spatial Statistics, Teaching Assistant
+      date: 2017
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    - name: The Global Environment, Climate Change, & Public Health, Teaching Assistant
+      date: 2016
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    - name: Spatial Analysis for Public Health, Teaching Assistant
+      date: 2016
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    - name: Spatial Data Technologies for Mapping, Teaching Assistant
+      date: 2016
+      institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    'Presentations: Invited Seminars/Presentations':
+    - name: Neighborhood heterogeneity in heat mortality across the Americas. Extreme Weather and Urban Health Webinar
+        Series, Drexel Research Center on Extreme Weather and Urban Health, Drexel University, Philadelphia, PA.
+      date: 2026
+    - name: 'Hotter Cities, Older Populations: Understanding and Responding to Converging Challenges in the 21st Century.
+        CCEB & DEBI Epidemiology Seminar Series, University of Pennsylvania, Philadelphia, PA.'
+      date: 2026
+    - name: Heat vulnerability within Philadelphia neighborhoods. City of Philadelphia Environmental Justice and Community
+        Resilience Working Group, Philadelphia.
+      date: 2025
+    - name: Interventions to reduce the health impacts of extreme heat in Rio de Janeiro. City of Rio de Janeiro Department
+        of Public Health, Virtual.
+      date: 2025
+    - name: Urban heat and public health from an environmental justice lens. Esperanza, community-based organization,
+        Philadelphia, PA.
+      date: 2025
+    - name: Extreme heat from a public health perspective. Philadelphia Climate Justice Collective Town Hall, Philadelphia,
+        PA.
+      date: 2025
+    - name: Future heat-related mortality in Latin American under climate change and aging scenarios. Environmental
+        and Occupational Health Flash Talk Series, Drexel University, Philadelphia, PA.
+      date: 2025
+    - name: The impacts of floods on mortality in Latin American cities. Urban Health Collaborative Weekly Forum, Drexel
+        University, Philadelphia, PA.
+      date: 2025
+    - name: Extreme temperatures and mortality in Latin American cities. Colombia National Ministry of Health, Virtual.
+      date: 2024
+    - name: 'Urban heat and mortality in a time of climate change and population aging: lessons from Latin American
+        cities. John Ruffin Health Disparities Seminar Series, National Institute on Aging, NIH, Baltimore, MD.'
+      date: 2024
+    - name: Air quality, health, and inequities in Latin American cities. Webinar series on Cleaner Air Through Better
+        Places, World Health Organization.
+      date: 2024
+    - name: Leveraging Open Access & Online Interactive Applications to Disseminate Urban Health Research. Drexel University
+        Libraries Open Access Week, Philadelphia, PA.
+      date: 2023
+    - name: Cambio climático y disparidades de salud en cuidades latinoamericanas [Climate change and health disparities
+        in Latin American cities]. Center for Population Health Research Seminar Series, National Institute of Public
+        Health (Mexico), Mexico City, Mexico.
+      date: 2023
+    - name: Social disparities in flood exposures in Latin American cities. Urban Health Collaborative Weekly Forum,
+        Drexel University, Philadelphia, PA.
+      date: 2023
+    - name: 'Modeling the health impacts of time-varying climate factors: heat and mortality. Workshop at the 2023 Urban
+        Health in Latin America Meeting, Mexico City, Mexico.'
+      date: 2023
+    - name: 'Climate change and health equity: extreme temperatures and mortality in highly urbanized Latin America.
+        Department of Epidemiology, Biostatistics, and Occupational Health Seminar Series, McGill University, Montreal,
+        Canada.'
+      date: 2023
+    - name: Global Climate Change and Health Equity in Cities. Urban Health Collaborative Weekly Forum, Drexel University,
+        Philadelphia, PA.
+      date: 2023
+    - name: 'Climate Change and Health Equity: Confronting Current and Future Environmental Health Disparities. Department
+        of Environmental and Occupational Health, Drexel University, Philadelphia, PA.'
+      date: 2022
+    - name: Understanding the impacts of climate disasters on health disparities. Urban Health Collaborative Weekly
+        Forum, Drexel University, Philadelphia, PA.
+      date: 2022
+    - name: 'Improving environments to reduce health disparities: air pollution, extreme heat, and COVID-19 lockdowns
+        in Latin America. Department of Environmental and Occupational Health Research Seminar, Drexel University, Philadelphia,
+        PA.'
+      date: 2021
+    - name: 'Extreme heat and mortality: evidence from 326 Latin American cities. Climate Change and Health panel, Climate
+        Year Speaker Series, Drexel University, Philadelphia, PA.'
+      date: 2021
+    - name: 'Household air pollution: an exposure of inequity. Urban Health Collaborative Seminar, Drexel University,
+        Philadelphia, PA.'
+      date: 2020
+    - name: COVID-19 and air pollution in Latin American cities. Urban Health Collaborative Seminar, Drexel University,
+        Philadelphia, PA.
+      date: 2020
+    - name: COVID-19, air pollution, and health inequities in Latin American cities. Latin America and the Caribbean
+        Urban Health Webinar Series, Drexel University, Philadelphia, PA.
+      date: 2020
+    - name: Nitrogen dioxide exposures from biomass and gas cookstoves. Department of Environmental Health and Engineering
+        Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD.
+      date: 2019
+    - name: Nitrogen dioxide and household air pollution from biomass and liquefied petroleum gas cookstoves. Department
+        of Environmental Health and Engineering Doctoral Thesis Defense, Johns Hopkins University, Baltimore, MD.
+      date: 2019
+    - name: The role of nitrogen dioxide in household air pollution from biomass and gas cookstoves. Department of Environmental
+        Health and Engineering Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD.
+      date: 2018
+    - name: Effect of a clean cookstove intervention on household air pollutants in Puno, Peru. Department of Environmental
+        Health and Engineering Doctoral Student Seminar, Johns Hopkins University, Baltimore, MD.
+      date: 2016
+    'Presentations: Presentations at Scientific Meetings (Keynote/Plenary Speaker)':
+    - name: A Multi-country Analysis of Floods and Mortality in 1,374 Latin American Municipalities, with Modification
+        by Age and Sex (Plenary Speaker). American Geophysical Union (AGU) & American Meteorological Society (AMS) GeoHealth
+        Showcase, Virtual.
+      date: 2026
+    - name: 'Urban Design as a Public Health Intervention: Reducing Heat Mortality in the Americas (Plenary Speaker).
+        7th International Smart and Health Cities Symposium, UNESCO Chair/Thomas Jefferson University, Philadelphia.'
+      date: 2026
+    - name: Disentangling climate hazards from demographic change in climate–health projections (Keynote Speaker). Climate
+        Change, Environmental Hazards, and Population Dynamics Conference, Max Planck Institute for Demographic Research,
+        Rostock, Germany.
+      date: 2025
+    - name: 'Climate change, mobility, and health: lessons from Latin American cities (Plenary Speaker). The 82 Alliance
+        Mobility Conference, Philadelphia, PA.'
+      date: 2024
+    - name: Global environmental health challenges and opportunities for early career researchers (Plenary Speaker).
+        NIH/NIEHS Global Environmental Health Day, Research Triangle Park, NC.
+      date: 2018
+    'Presentations: Session Chair (or equivalent) at Scientific Meetings':
+    - name: Emerging climate-health threats in Latin American cities (Symposium Organizer and Chair). International
+        Society for Environmental Epidemiology (ISEE), Munich, Germany.
+      date: 2026
+    - name: Outdoor and Indoor Air Pollution (Session Chair). International Society for Environmental Epidemiology North
+        America Chapter (ISEE-NAC), Baltimore, MD.
+      date: 2026
+    - name: Climate change and health across the lifespan in urban Latin America (Symposium Organizer and Chair). International
+        Society for Environmental Epidemiology (ISEE), Atlanta, GA.
+      date: 2025
+    - name: 'Haze hazards: long-term exposure to air pollution and chronic health effects (Session Chair). International
+        Society for Environmental Epidemiology (ISEE), Santiago, Chile.'
+      date: 2024
+    - name: Climate and temperature and health (Session Chair). International Society for Environmental Epidemiology
+        (ISEE), Virtual meeting.
+      date: 2021
+    'Presentations: Presentations at Scientific Meetings (Oral Presentations)':
+    - name: A multi-country study of the mortality effects of compound exposures to short-term heat and air pollution
+        in urban Latin America (Oral Presentation). International Society for Environmental Epidemiology (ISEE), Munich,
+        Germany.
+      date: 2026
+    - name: Neighborhood heterogeneity in heat-mortality impacts across the Americas (Oral Presentation). NIH Health
+        and Extreme Weather Science Symposium, NIAID/NIH, Rockville, MD.
+      date: 2026
+    - name: A Multi-country Analysis of Floods and Mortality in 1,374 Latin American Municipalities, with Modification
+        by Age, Sex, and Features of the Urban Environment (Oral Presentation). American Geophysical Union (AGU) Meeting,
+        New Orleans, LA.
+      date: 2025
+    - name: Heterogeneity in heat-related mortality between neighborhoods in five cities of the Americas (Oral Presentation).
+        International Society for Environmental Epidemiology (ISEE), Atlanta, GA.
+      date: 2025
+    - name: Temperature-related mortality in nine Latin American countries under climate change and population scenarios
+        (Oral Presentation). International Society for Environmental Epidemiology (ISEE), Santiago, Chile.
+      date: 2024
+    - name: 'Climate change and urban health in Latin America: The SALURBAL-Climate Project (Oral Presentation). CAFÉ
+        Climate and Health Conference, Virtual meeting.'
+      date: 2024
+    - name: Six years of the Urban Health in Latin America Project (Panel Discussion). International Conference on Urban
+        Health (ICUH), Atlanta, GA.
+      date: 2023
+    - name: Social disparities in flood exposure and associations with the built environment in 49,233 urban neighborhoods
+        in eight Latin American countries (Moderated Discussion). International Society for Environmental Epidemiology
+        (ISEE), Kaohsiung, Taiwan.
+      date: 2023
+    - name: Extreme temperatures and health in Latin American cities (Oral Presentation). International Conference on
+        Urban Health (ICUH), Virtual meeting.
+      date: 2021
+    - name: The impact of mobility on COVID-19 incidence and disparities at the sub-city level in 314 Latin American
+        cities (Oral Presentation). Society for Epidemiologic Research (SER), Virtual meeting.
+      date: 2021
+    - name: Energy transitions for household air pollution (Oral Presentation). Primary Air Care Symposium, Johns Hopkins
+        University, Baltimore, MD.
+      date: 2019
+    - name: Household air pollution reductions in the Cardiopulmonary Outcomes and Household Air Pollution trial (Oral
+        Presentation). Global Non-Communicable Diseases Symposium, Johns Hopkins School of Medicine, Baltimore, MD.
+      date: 2018
+    - name: 'Indoor NO2 in homes with biomass cookstoves before and after a gas stove intervention: preliminary results
+        (Oral Presentation). Joint Meeting of the International Society of Exposure Science (ISES) and the International
+        Society for Environmental Epidemiology (ISEE), Ottawa, Canada.'
+      date: 2018
+    - name: The GEOHealth program in Peru, with preliminary results from a project on clean cookstoves (Oral Presentation).
+        Joint Meeting of the International Society of Exposure Science (ISES) and the International Society for Environmental
+        Epidemiology (ISEE), Ottawa, Canada.
+      date: 2018
+    - name: Preliminary results of environmental assessments in the CHAP study (Oral Presentation). Global Non-Communicable
+        Diseases Symposium, Johns Hopkins School of Medicine, Baltimore, MD.
+      date: 2017
+    'Presentations: Presentations at Scientific Meetings (Selected Posters, presented on site as first author)':
+    - name: Temperature-related mortality in Latin American cities under climate change and population aging scenarios
+        (Poster). NIH Faculty Institutional Recruitment for Sustainable Transformation (FIRST) Program Annual Grantees
+        Conference, Bethesda, MD.
+      date: 2024
+    - name: Ambient nitrogen dioxide exposures in Latin American cities (Poster). International Society for Environmental
+        Epidemiology (ISEE), Athens, Greece.
+      date: 2022
+    - name: Extreme temperatures and mortality in 326 Latin American cities (Poster). International Society for Environmental
+        Epidemiology (ISEE), Virtual meeting.
+      date: 2021
+    - name: COVID-19, ambient air pollution, and environmental health inequities in Latin American cities (Poster).
+        International Society for Environmental Epidemiology (ISEE), Virtual meeting.
+      date: 2020
+    - name: Exposure misclassification from area sampling in epidemiologic studies of cookstove emissions (Poster).
+        International Society for Environmental Epidemiology (ISEE), Utrecht, The Netherlands.
+      date: 2019
+    - name: Using Free Statistical Computing Tools for Public Health Data Analysis in Resource-Limited Settings (Poster).
+        Global Environmental and Occupational Health (GEOHealth) Network Meeting, National Institutes of Health, Bethesda,
+        MD.
+      date: 2017
+    - name: Spatial patterns of initial drug use among intravenous drug users in Baltimore, MD (Poster). Geographic
+        Information Systems Day, Johns Hopkins Bloomberg School of Public Health, Baltimore, MD.
+      date: 2014
+    Academic Service:
     - name: Drexel University Council on Core Competencies
       date: 2026-present
+      institution: Drexel University, Philadelphia, PA
     - name: Faculty Advisor, Public Health Doctoral Student Advisory Group
       date: 2024-present
+      institution: Drexel University, Philadelphia, PA
     - name: Committee, PhD Program in Environmental and Occupational Health
       date: 2023-present
+      institution: Drexel University, Philadelphia, PA
     - name: Department Representative (Environmental and Occupational Health), Executive Committee of Faculty, Dornsife
         School of Public Health
       date: 2023-present
+      institution: Drexel University, Philadelphia, PA
     - name: Committee, MS Program in Environmental and Occupational Health
       date: 2023-2024
+      institution: Drexel University, Philadelphia, PA
     - name: Founder & co-leader, Climate Change and Health Equity Working Group
       date: 2022-2024
+      institution: Drexel University, Philadelphia, PA
     - name: Faculty Advisory Board, Public Health Doctoral Student Advisory Group
       date: 2022-2024
-    'Academic Service: Johns Hopkins University':
+      institution: Drexel University, Philadelphia, PA
     - name: Planning committee, Global Non-Communicable Diseases Symposium
       date: 2018
+      institution: Johns Hopkins University, Baltimore, MD
     - name: Planning committee, Global Non-Communicable Diseases Symposium
       date: 2017
+      institution: Johns Hopkins University, Baltimore, MD
     - name: Co-founder, Refuel Our Future, student group advocating for University fossil fuel divestment
       date: 2012-2013
-    'Academic Service: George Mason University':
+      institution: Johns Hopkins University, Baltimore, MD
     - name: Student Representative, Save Darfur Coalition
       date: 2006-2008
-    'Academic Service: Northern Virginia Community College':
+      institution: George Mason University, Fairfax, VA
     - name: Vice President (elected), Society for Black Students’ Concerns
       date: 2004-2005
+      institution: Northern Virginia Community College, Annandale, VA
     Community Service:
     - name: Expert reviewer, City of Philadelphia, Environmental Justice Mapping Tool
       date: 2026
@@ -1697,11 +1824,12 @@ cv:
       date: 2010-2012
     Skills and Certifications:
     - name: Spanish – Professional working proficiency
-      date: Languages
-    'Skills and Certifications: Certifications':
+      group: Languages
     - name: Certified in Public Health (CPH), National Board of Public Health Examiners
       date: 2013-present
+      group: Certifications
     - name: Group Facilitation Certification, Latino Commission on AIDS
       date: 2010
+      group: Certifications
 design:
   theme: classic

@@ -82,41 +82,39 @@ write("recent_publications.md", recent)
 
 # ---------------------------------------------------------------- grants
 def grant_html(g):
-    # Dollar amounts (the `highlights` field) stay in the CV PDF only, never on the website.
+    # Dollar amounts (the `total_costs` field) stay in the CV PDF only, never on the website.
+    meta = ". ".join(x for x in (g.get("funder"), g.get("investigators")) if x) + "."
     return (f'<div class="grant"><div class="grant-title">{esc(g["name"])}</div>'
-            f'<div class="grant-meta">{esc(g.get("summary", ""))} {esc(g.get("date", ""))}</div></div>')
+            f'<div class="grant-meta">{esc(meta)} {esc(g.get("date", ""))}</div></div>')
 
 write("active_grants.md", "\n".join(grant_html(g) for g in S.get("Active Grants", [])))
 
 # ---------------------------------------------------------------- people
-LAB_SECTIONS = {  # sections where the PI is the primary mentor -> lab members
-    "Mentoring: Postdoctoral Fellow": "Postdoctoral fellow",
-    "Mentoring: Doctoral Primary Advisor": "PhD student",
-    "Mentoring: Graduate Research Fellows or Research Assistants": "Graduate research assistant",
-    "Mentoring: Advisees (Master)": "MPH advisee",
-    "Mentoring: Master’s Applied Practical Experience (APE) Preceptor/Supervisor": "MPH practicum student",
-    "Mentoring: Undergraduate Research Assistants": "Undergraduate research assistant",
-}
+# Lab members are Mentoring entries with a `lab_role` (people the PI mentors directly).
+# Listed in this order of role, then CV order within a role.
+LAB_ROLE_ORDER = ["Postdoctoral fellow", "PhD student", "Graduate research assistant",
+                  "MPH advisee", "MPH practicum student", "Undergraduate research assistant"]
 
 
 def parse_person(entry):
-    text = entry["name"]
-    name = re.split(r"[.,]", text, maxsplit=1)[0].strip()
-    prog = re.search(r"Program:\s*([^.]+?)(?:,\s*Dornsife.*|,\s*Drexel University.*)?\.?\s*(?:Current|$)", text)
-    now = re.search(r"Current position:\s*(.+?)\.?$", text)
-    return name, (prog.group(1).strip() if prog else ""), (now.group(1).strip() if now else "")
+    name = re.split(r"[.,]", entry["name"], maxsplit=1)[0].strip()
+    prog = re.sub(r",\s*(Dornsife|Drexel University).*$", "", entry.get("program", "")).strip()
+    return name, prog, entry.get("position", "")
 
+
+lab = [e for sec, es in S.items() if sec.startswith("Mentoring") for e in es if e.get("lab_role")]
+lab.sort(key=lambda e: LAB_ROLE_ORDER.index(e["lab_role"]) if e["lab_role"] in LAB_ROLE_ORDER
+         else len(LAB_ROLE_ORDER))
 
 current, alumni, seen = [], [], set()
-for sec, role in LAB_SECTIONS.items():
-    for e in S.get(sec, []):
-        name, prog, now = parse_person(e)
-        if name in seen:
-            continue
-        seen.add(name)
-        d = str(e.get("date", ""))
-        rec = {"name": name, "role": role, "program": prog, "now": now, "date": d}
-        (current if "present" in d else alumni).append(rec)
+for e in lab:
+    name, prog, now = parse_person(e)
+    if name in seen:
+        continue
+    seen.add(name)
+    d = str(e.get("date", ""))
+    rec = {"name": name, "role": e["lab_role"], "program": prog, "now": now, "date": d}
+    (current if "present" in d else alumni).append(rec)
 
 cards = []
 for p in current:
@@ -142,7 +140,22 @@ def years_by_item(entries):
     return out
 
 
-courses = years_by_item(S.get("Teaching: Instructor of Record (Drexel University)", []))
+T_CLASS = "Teaching: Classroom Instruction (Instructor or Course Director)"
+T_SHORT = "Teaching: Short Courses (Instructor or Course Director)"
+T_GUEST = "Teaching: Guest Lecturing"
+T_OTHER = "Teaching: Other Significant Teaching (Informal Talks, Teaching Assistant, Laboratory Instructor)"
+TA_SUFFIX = ", Teaching Assistant"
+
+
+def with_place(e):
+    """Entry text plus its institution, without a trailing US 'City, ST' (e.g. ', Philadelphia, PA')."""
+    inst = re.sub(r", [^,]+, [A-Z]{2}$", "", e.get("institution", ""))
+    return f"{e['name']}, {inst}" if inst else e["name"]
+
+
+is_drexel = lambda e: e.get("institution", "").startswith("Drexel University")
+taught = S.get(T_CLASS, []) + S.get(T_SHORT, [])
+courses = years_by_item([e for e in taught if is_drexel(e)])  # the website lists Drexel courses
 tl = ["## Courses\n", "*Dornsife School of Public Health, Drexel University*\n"]
 for name, yrs in courses.items():
     title, _, detail = name.rpartition(", ") if "(" in name else (name, "", "")
@@ -150,17 +163,21 @@ for name, yrs in courses.items():
     tl.append(f'<div class="course"><div class="course-title">{esc(title or name)}</div>'
               f'<div class="course-meta">{esc(detail)} &middot; {yrs_s}</div></div>')
 
-workshops = S.get("Teaching: Workshops and other trainings", [])
+other = S.get(T_OTHER, [])
+workshops = ([e for e in taught if not is_drexel(e)]  # e.g. conference short courses
+             + [e for e in other if not e["name"].endswith(TA_SUFFIX)])
+workshops.sort(key=lambda e: str(e.get("date", "")), reverse=True)
 if workshops:
     tl.append("\n## Workshops and trainings\n")
-    tl += [f"- {esc(e['name'])} ({e.get('date', '')})" for e in workshops]
+    tl += [f"- {esc(with_place(e))} ({e.get('date', '')})" for e in workshops]
 
-lectures = S.get("Teaching: Guest Lectures", [])
+lectures = S.get(T_GUEST, [])
 if lectures:
     tl.append("\n## Guest lectures\n")
-    tl += [f"- {esc(e['name'])} ({e.get('date', '')})" for e in lectures]
+    tl += [f"- {esc(with_place(e))} ({e.get('date', '')})" for e in lectures]
 
-ta = years_by_item(S.get("Teaching: Teaching Assistantships (Johns Hopkins)", []))
+ta = years_by_item([{**e, "name": e["name"][: -len(TA_SUFFIX)]}
+                    for e in other if e["name"].endswith(TA_SUFFIX)])
 if ta:
     tl.append("\n## Teaching assistantships\n")
     tl.append("*Johns Hopkins Bloomberg School of Public Health*\n")
