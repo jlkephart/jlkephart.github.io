@@ -35,14 +35,14 @@ cv:
       company: Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
       start_date: 2022
       end_date: present
-    - position: GeoCAFE Scholar
-      company: U.S. National Science Foundation
-      start_date: 2025
-      end_date: 2026
     - position: Core Faculty
       company: Urban Health Collaborative, Dornsife School of Public Health, Drexel University
       start_date: 2022
       end_date: present
+    - position: GeoCAFE Scholar
+      company: U.S. National Science Foundation
+      start_date: 2025
+      end_date: 2026
     - position: Post-doctoral Fellow
       company: Urban Health Collaborative, Dornsife School of Public Health, Drexel University
       start_date: 2019
@@ -115,11 +115,11 @@ cv:
         Health Collaborative
       date: 2026
       group: Intramural (Drexel University)
-    - name: Publications and Proposals Review Committee, SALURBAL Project
-      date: 2021-present
-      group: Intramural (Drexel University)
     - name: Doctoral Fellowship reviewer, Urban Health Collaborative
       date: 2022, 2024
+      group: Intramural (Drexel University)
+    - name: Publications and Proposals Review Committee, SALURBAL Project
+      date: 2021-present
       group: Intramural (Drexel University)
     - name: Judge, Drexel University School of Biomedical Sciences and Professional Studies Discovery Day
       date: 2019
@@ -133,10 +133,10 @@ cv:
       Health, Nature Aging, Nature Medicine, Nature Cities, One Earth, PLOS ONE, Science Advances, Scientific Reports,
       Urban Climate
     'Editorial and Review Activities: Review of Abstracts for Scientific Meetings':
-    - name: International Society for Environmental Epidemiology Annual Meeting
-      date: 2021-2026
     - name: Society for Epidemiologic Research Annual Meeting
       date: 2022
+    - name: International Society for Environmental Epidemiology Annual Meeting
+      date: 2021-2026
     Honors and Awards:
     - name: GeoCAFE Scholar, US National Science Foundation
       date: 2025
@@ -1139,38 +1139,38 @@ cv:
       funder: Wellcome Trust (Climate and Mental Health Award)
       investigators: Augustinavicius, Lead PI (Kephart, Co-PI)
       total_costs: $3,869,602
-    - name: Temperature-related mortality in U.S. state prisons (R01AG092826)
-      date: 02/15/2026-01/31/2031
-      funder: National Institutes of Health, NIA
-      investigators: Jahn, PI (Kephart, Co-Investigator)
-      total_costs: $2,927,905
-    - name: Climate change and urban health in Latin America (SALURBAL-Climate; 227810/Z/23/Z)
-      date: 11/01/2023-10/30/2028
-      funder: Wellcome Trust
-      investigators: Diez Roux & Sarmiento, MPI (Kephart, Co-Investigator)
-      total_costs: $7,199,308
     - name: South Philadelphia Climate Resilience and Preparedness Initiative
       date: 03/01/2026-02/28/2028
       funder: William Penn Foundation
       investigators: Drexel Environmental Collaboratory & Southeast Asian Mutual Assistance Association Coalition (Kephart,
         Co-Investigator)
       total_costs: $318,000
+    - name: Temperature-related mortality in U.S. state prisons (R01AG092826)
+      date: 02/15/2026-01/31/2031
+      funder: National Institutes of Health, NIA
+      investigators: Jahn, PI (Kephart, Co-Investigator)
+      total_costs: $2,927,905
     - name: Urban Inequality and Spatial Distribution of Heat Mortality in Brazilian Cities (309840/Z/24/Z)
       date: 02/01/2024-01/31/2027
       funder: Wellcome Trust (Climate Impact Awards)
       investigators: Bilal, Co-PI (Kephart, Co-Investigator)
       total_costs: $960,995
+    - name: Climate change and urban health in Latin America (SALURBAL-Climate; 227810/Z/23/Z)
+      date: 11/01/2023-10/30/2028
+      funder: Wellcome Trust
+      investigators: Diez Roux & Sarmiento, MPI (Kephart, Co-Investigator)
+      total_costs: $7,199,308
     Completed Grants:
-    - name: Urban heat and healthcare utilization among people with chronic kidney disease
-      date: 09/01/2025-05/30/2026
-      funder: Drexel CCUH (Pilot Award)
-      investigators: Kephart, PI
-      total_costs: $30,300
     - name: Drexel Climate Change and Urban Health Research Center (Drexel CCUH) (P20MD019221)
       date: 09/25/2023-05/31/2026
       funder: National Institutes of Health, NIMHD
       investigators: Diez Roux, PI (Kephart, Co-Investigator)
       total_costs: $3,205,772
+    - name: Urban heat and healthcare utilization among people with chronic kidney disease
+      date: 09/01/2025-05/30/2026
+      funder: Drexel CCUH (Pilot Award)
+      investigators: Kephart, PI
+      total_costs: $30,300
     - name: Catalyzing Systemic Change at Drexel University to Support Diverse Faculty in Health Disparities Research
         (Faculty Institutional Recruitment for Sustainable Transformation; U54CA267735)
       date: 09/21/2021-03/21/2025
