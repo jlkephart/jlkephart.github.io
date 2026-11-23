@@ -777,6 +777,20 @@ cv:
       date: 2017
       co_first_or_senior: 'yes'
     Manuscripts Under Review:
+    - title: Indoor temperature in dwellings and its association with cardiovascular and respiratory health in the
+        general population. A scoping review to inform potential adaptation measures for climate change
+      authors:
+      - Jimenez-Ortiz CM
+      - Rincón-Rubio A
+      - Hurtado-Díaz M
+      - '**Kephart JL**'
+      - Zúñiga-Bello PE
+      - Barrientos-Gutiérrez T
+      - Riojas-Rodríguez H
+      - Mérida-Ortega Á
+      - Pérez-Ferrer C
+      journal: Under review
+      mentees: Jimenez-Ortiz CM
     - title: Diverging temperature–mortality risk trends across 344 Latin American cities by climate zone, greenspace
         configuration, and age group
       authors:
