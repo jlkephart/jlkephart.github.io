@@ -1,13 +1,21 @@
-# Single source of truth for the CV and the lab website.
-# Migrated from KephartJ_CV_2026-09.docx on 2026-11-19. Edit this file, not the .docx.
-# Publication extras used by the website: `mentees` (underlined trainee authors),
-# `co_first_or_senior`. Names in **bold** are Kephart JL.
-# Mentoring sections are by role (a person can appear in several). Entries: `name` (with optional
-# credential), `date`, and optional `fellowship` (shown in parentheses), `program`, `with`
-# (co-advisor), `affiliation`, `note` (e.g. how a faculty mentee is mentored), `thesis` (thesis
-# title), `position` (current position) and `award`
-# (written as a sentence, e.g. "Awarded the ... Award"). `lab_role` puts the person on the
-# website People page with that label.
+# Single source of truth for the CV PDF and the lab website (migrated from the Word CV on
+# 2026-11-19). Content only: the build scripts add all layout. Run scripts/validate_cv.py to check.
+# Full conventions are in README.md; in short:
+# - Section order here is the PDF order. "Group: Sub" names print one group heading with
+#   sub-headings; keep a group's sections next to each other.
+# - Dates: 2024, 2024-2026, 2024-present, or "2022, 2024"; grants may use MM/DD/YYYY-MM/DD/YYYY.
+# - Publications: authors as a list, '**Kephart JL**' for the PI, a trailing \* for co-first or
+#   co-senior authors. Trainee underlines are automatic from the Mentoring sections; override per
+#   paper with `mentees: "Surname I"` or `not_mentees: "Surname I"` (semicolon-separated).
+# - Grants: name (title + number), date, funder, investigators, total_costs (PDF only).
+# - Media: name (headline), date (year), outlet, note, day ("May 24"), url.
+# - Mentoring (by role; a person can appear in several): name (with credentials after a comma),
+#   date, and optional fellowship (shown in parentheses), program, with (co-advisor),
+#   affiliation, note, thesis, position ("Title (Organization)"), award (a sentence), and
+#   lab_role (puts the person on the website People page with that label).
+# - Teaching: name ("Title, EOH 642 (3 credits)", "Title, Independent Study (3 credits; 1
+#   student)" or "Title, Summer Institute (15 hrs)"), date, institution (sub-heading).
+# - Other list sections: name, date, optional group (an italic sub-heading).
 
 cv:
   name: Josiah L. Kephart
@@ -313,7 +321,6 @@ cv:
       journal: Environment International
       date: 2025
       mentees: Jaffe A
-      co_first_or_senior: 'yes'
     - title: Individual and city-level variations in heat-related road traffic deaths in Latin America
       authors:
       - Hsu CK
@@ -553,7 +560,6 @@ cv:
       doi: 10.1289/EHP10054
       journal: Environmental Health Perspectives
       date: 2022
-      co_first_or_senior: 'yes'
     - title: Ambient temperature and birthweight in Latin American cities
       authors:
       - Bakhtsiyarava M
@@ -844,7 +850,6 @@ cv:
       - and the SALURBAL Group
       journal: Under review
       mentees: Figueroa JC; Jardel H
-      co_first_or_senior: 'yes'
     - title: 'Ambient temperature, school absenteeism, and effect modification by classroom air conditioning in
         New York City public schools: A case time series analysis'
       authors:
@@ -999,7 +1004,6 @@ cv:
       - Diez Roux AV
       - Bilal U
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: 'Urban flood exposures in Latin America: spatial patterns, changes over time, and urban drivers'
       authors:
       - Jardel H
@@ -1069,70 +1073,128 @@ cv:
         Sarmiento OL, Slesinski C, Vives Vergara A. COVID-19 and Urban Health in Latin America and the Caribbean.
         SALURBAL Special Data Brief No. 1. June 2021.
     Media and Research Dissemination:
-    - name: The Nation’s Health (APHA). Playing it safe with fumes from gas stoves. Primary expert for public-facing
-        one-pager on health risks from gas stoves. May 24. https://www.thenationshealth.org/sites/default/files/additional-assets/healthyyou/HealthyYouMay24_GasStoves.pdf
+    - name: Playing it safe with fumes from gas stoves
       date: 2025
-    - name: Eos (AGU). Cooking with Gas Creates Unhealthy Work Environments. Quoted on occupational health risks
-        for commercial kitchen workers. Dec 12. https://eos.org/articles/cooking-with-gas-creates-unhealthy-work-environments
+      outlet: The Nation’s Health (APHA)
+      note: Primary expert for public-facing one-pager on health risks from gas stoves.
+      day: May 24
+      url: https://www.thenationshealth.org/sites/default/files/additional-assets/healthyyou/HealthyYouMay24_GasStoves.pdf
+    - name: Cooking with Gas Creates Unhealthy Work Environments
       date: 2024
-    - name: Philadelphia Inquirer. New Jersey’s wildfires are under control. But health effects from wildfire smoke
-        can linger. Q&A style interview about health impacts of wildfire smoke and connections with climate change.
-        Nov 13. https://www.inquirer.com/health/new-jersey-wildfire-smoke-safety-20241112.html
+      outlet: Eos (AGU)
+      note: Quoted on occupational health risks for commercial kitchen workers.
+      day: Dec 12
+      url: https://eos.org/articles/cooking-with-gas-creates-unhealthy-work-environments
+    - name: New Jersey’s wildfires are under control. But health effects from wildfire smoke can linger
       date: 2024
-    - name: AARP Bulletin. AARP Guide to Modern Problems and Their Solutions. Quoted about reducing personal health risk from gas stoves. May 14. https://www.aarp.org/benefits-discounts/members-only-access/info-2024/modern-problems-solutions-guide.html
+      outlet: Philadelphia Inquirer
+      note: Q&A style interview about health impacts of wildfire smoke and connections with climate change.
+      day: Nov 13
+      url: https://www.inquirer.com/health/new-jersey-wildfire-smoke-safety-20241112.html
+    - name: AARP Guide to Modern Problems and Their Solutions
       date: 2024
-    - name: HealthDay. Firsthand Experience of Climate Change Disasters Is Stressing Teens. Quoted about senior-authored
-        study on climate change and teen mental health. Feb 27. https://www.healthday.com/health-news/child-health/firsthand-experience-of-climate-change-disasters-is-stressing-teens
+      outlet: AARP Bulletin
+      note: Quoted about reducing personal health risk from gas stoves.
+      day: May 14
+      url: https://www.aarp.org/benefits-discounts/members-only-access/info-2024/modern-problems-solutions-guide.html
+    - name: Firsthand Experience of Climate Change Disasters Is Stressing Teens
       date: 2024
-    - name: 'Popular Mechanics. Gas vs. Electric Stoves: Which Is Better for Your Home? Quoted in article on health
-        risks from indoor air pollution. Nov 10. https://www.popularmechanics.com/home/tools/a44967012/gas-vs-electric-stove/'
+      outlet: HealthDay
+      note: Quoted about senior-authored study on climate change and teen mental health.
+      day: Feb 27
+      url: https://www.healthday.com/health-news/child-health/firsthand-experience-of-climate-change-disasters-is-stressing-teens
+    - name: 'Gas vs. Electric Stoves: Which Is Better for Your Home?'
       date: 2023
-    - name: 'National Public Radio: Short Wave. How worried should you be about your gas stove? Interview with Jeff
-        Brady. Jan 30. https://www.npr.org/2023/01/27/1152117365/how-worried-should-you-be-about-your-gas-stove'
+      outlet: Popular Mechanics
+      note: Quoted in article on health risks from indoor air pollution.
+      day: Nov 10
+      url: https://www.popularmechanics.com/home/tools/a44967012/gas-vs-electric-stove/
+    - name: How worried should you be about your gas stove?
       date: 2023
-    - name: The New York Times. Is the Era of Gas Stoves Burning Out? Quoted in article about health risks of gas
-        stoves. Jan 25. https://www.nytimes.com/2023/01/25/opinion/gas-stove-ban-induction.html
+      outlet: 'National Public Radio: Short Wave'
+      note: Interview with Jeff Brady.
+      day: Jan 30
+      url: https://www.npr.org/2023/01/27/1152117365/how-worried-should-you-be-about-your-gas-stove
+    - name: Is the Era of Gas Stoves Burning Out?
       date: 2023
-    - name: Scientific American. The Health Risks of Gas Stoves Explained. Quoted about reducing health threats
-        from gas stoves. https://www.scientificamerican.com/article/the-health-risks-of-gas-stoves-explained/
+      outlet: The New York Times
+      note: Quoted in article about health risks of gas stoves.
+      day: Jan 25
+      url: https://www.nytimes.com/2023/01/25/opinion/gas-stove-ban-induction.html
+    - name: The Health Risks of Gas Stoves Explained
       date: 2023
-    - name: 'National Public Radio: Here & Now. What we know about the dangerous pollutants emitted by gas stoves.
-        Six-minute radio interview aired nationally on health risks from gas stoves. Jan 10. https://www.npr.org/2023/01/10/1148156485/human-composting-offers-an-environmentally-friendly-alternative-gas-stoves-emiss'
+      outlet: Scientific American
+      note: Quoted about reducing health threats from gas stoves.
+      url: https://www.scientificamerican.com/article/the-health-risks-of-gas-stoves-explained/
+    - name: What we know about the dangerous pollutants emitted by gas stoves
       date: 2023
-    - name: Energy and Climate Partnership of the Americas (Organization of American States). Heat and Human Health.
-        Quoted in article about findings of Kephart et al. Nature Medicine (2022). Aug 27. https://ecpamericas.org/newsletters/heat-and-human-health/
+      outlet: 'National Public Radio: Here & Now'
+      note: Six-minute radio interview aired nationally on health risks from gas stoves.
+      day: Jan 10
+      url: https://www.npr.org/2023/01/10/1148156485/human-composting-offers-an-environmentally-friendly-alternative-gas-stoves-emiss
+    - name: Heat and Human Health
       date: 2022
-    - name: 'BBC News World Service: Science In Action. Extreme heat death risk in Latin America. Seven-minute radio
-        interview run globally about findings of Kephart et al. Nature Medicine (2022). Jun 30. https://www.bbc.co.uk/programmes/w3ct3695'
+      outlet: Energy and Climate Partnership of the Americas (Organization of American States)
+      note: Quoted in article about findings of Kephart et al. Nature Medicine (2022).
+      day: Aug 27
+      url: https://ecpamericas.org/newsletters/heat-and-human-health/
+    - name: Extreme heat death risk in Latin America
       date: 2022
-    - name: Science Magazine. Extreme temperatures in major Latin American cities could be linked to nearly 1 million
-        deaths. Quoted in article about findings of Kephart et al. Nature Medicine (2022). Jun 28. https://www.science.org/content/article/extreme-temperatures-major-latin-american-cities-could-be-linked-nearly-1-million
+      outlet: 'BBC News World Service: Science In Action'
+      note: Seven-minute radio interview run globally about findings of Kephart et al. Nature Medicine (2022).
+      day: Jun 30
+      url: https://www.bbc.co.uk/programmes/w3ct3695
+    - name: Extreme temperatures in major Latin American cities could be linked to nearly 1 million deaths
       date: 2022
-    - name: 'National Public Radio: All Things Considered. Encore: Gas stoves leak climate-warming methane even
-        when they’re turned off. Interview with Jeff Brady appearing on nationally syndicated radio. Jun 2. https://www.npr.org/2022/06/02/1102728976/encore-gas-stoves-leak-climate-warming-methane-even-when-theyre-off'
+      outlet: Science Magazine
+      note: Quoted in article about findings of Kephart et al. Nature Medicine (2022).
+      day: Jun 28
+      url: https://www.science.org/content/article/extreme-temperatures-major-latin-american-cities-could-be-linked-nearly-1-million
+    - name: 'Encore: Gas stoves leak climate-warming methane even when they’re turned off'
       date: 2022
-    - name: CBC News. After seeing how gas stoves pollute homes, these researchers are ditching theirs. Quoted in
-        web article by Canadian public broadcaster. Apr 07. https://www.cbc.ca/news/science/gas-stoves-air-pollution-1.6394514?cmp=rss
+      outlet: 'National Public Radio: All Things Considered'
+      note: Interview with Jeff Brady appearing on nationally syndicated radio.
+      day: Jun 2
+      url: https://www.npr.org/2022/06/02/1102728976/encore-gas-stoves-leak-climate-warming-methane-even-when-theyre-off
+    - name: After seeing how gas stoves pollute homes, these researchers are ditching theirs
       date: 2022
-    - name: Carbon Switch. How bad is my gas stove? Interview with Michael Thomas appearing in a prominent climate
-        action newsletter and website. Jan 13. https://carbonswitch.co/how-bad-is-my-gas-stove-part-two
+      outlet: CBC News
+      note: Quoted in web article by Canadian public broadcaster.
+      day: Apr 07
+      url: https://www.cbc.ca/news/science/gas-stoves-air-pollution-1.6394514?cmp=rss
+    - name: How bad is my gas stove?
       date: 2022
-    - name: 'National Public Radio: Morning Edition. We need to talk about your gas stove, your health and climate
-        change. Interview with Jeff Brady appearing on nationally syndicated radio with accompanying web article.
-        Oct 07. https://www.npr.org/2021/10/07/1015460605/gas-stove-emissions-climate-change-health-effects'
+      outlet: Carbon Switch
+      note: Interview with Michael Thomas appearing in a prominent climate action newsletter and website.
+      day: Jan 13
+      url: https://carbonswitch.co/how-bad-is-my-gas-stove-part-two
+    - name: We need to talk about your gas stove, your health and climate change
       date: 2021
-    - name: Centers for Disease Control and Prevention. COVID-19 Science Update (Edition 104). Summary of key findings
-        from Kephart et al. (2021, The Lancet Digital Health). Sep 10. https://stacks.cdc.gov/view/cdc/109671
+      outlet: 'National Public Radio: Morning Edition'
+      note: Interview with Jeff Brady appearing on nationally syndicated radio with accompanying web article.
+      day: Oct 07
+      url: https://www.npr.org/2021/10/07/1015460605/gas-stove-emissions-climate-change-health-effects
+    - name: COVID-19 Science Update (Edition 104)
       date: 2021
-    - name: Infobae. ¿Cuándo recomiendan los científicos levantar las restricciones de la pandemia? [When do scientists
-        recommend lifting pandemic restrictions?]. Article in major Argentine news outlet highlighting Kephart et
-        al. (2021, The Lancet Digital Health) as evidence for COVID-19 mitigation policies. Sep 6. https://www.infobae.com/america/ciencia-america/2021/09/07/cuando-recomiendan-los-cientificos-levantar-las-restricciones-de-la-pandemia/
+      outlet: Centers for Disease Control and Prevention
+      note: Summary of key findings from Kephart et al. (2021, The Lancet Digital Health).
+      day: Sep 10
+      url: https://stacks.cdc.gov/view/cdc/109671
+    - name: ¿Cuándo recomiendan los científicos levantar las restricciones de la pandemia? [When do scientists recommend
+        lifting pandemic restrictions?]
       date: 2021
-    - name: Infobae. The Lancet analizó la relación entre la movilidad urbana y los contagios en 314 ciudades de
-        América Latina [The Lancet analyzed the relationship between urban mobility and infection in 314 cities
-        in Latin America]. Article in major Argentine news outlet summarizing Kephart et al. (2021, The Lancet Digital
-        Health). Aug 30. https://www.infobae.com/america/tendencias-america/2021/08/30/the-lancet-analizo-la-relacion-entre-la-movilidad-urbana-y-los-contagios-en-314-ciudades-de-america-latina/
+      outlet: Infobae
+      note: Article in major Argentine news outlet highlighting Kephart et al. (2021, The Lancet Digital Health) as
+        evidence for COVID-19 mitigation policies.
+      day: Sep 6
+      url: https://www.infobae.com/america/ciencia-america/2021/09/07/cuando-recomiendan-los-cientificos-levantar-las-restricciones-de-la-pandemia/
+    - name: The Lancet analizó la relación entre la movilidad urbana y los contagios en 314 ciudades de América Latina
+        [The Lancet analyzed the relationship between urban mobility and infection in 314 cities in Latin America]
       date: 2021
+      outlet: Infobae
+      note: Article in major Argentine news outlet summarizing Kephart et al. (2021, The Lancet Digital Health).
+      day: Aug 30
+      url: https://www.infobae.com/america/tendencias-america/2021/08/30/the-lancet-analizo-la-relacion-entre-la-movilidad-urbana-y-los-contagios-en-314-ciudades-de-america-latina/
     Active Grants:
     - name: 'Youth in Urban Centres across the Americas (YUCA): Understanding and addressing heat impacts on mental
         health (322204/Z/24/Z)'

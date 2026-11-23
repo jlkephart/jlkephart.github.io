@@ -2,8 +2,6 @@
 title: "Research"
 ---
 
-<!-- EDIT ME: research themes are hand-written; the funded projects list below updates from the CV. -->
-
 **Climate hazards and health in cities.** Heat, cold, floods, and other climate hazards and their effects on
 mortality and morbidity across hundreds of Latin American cities and U.S. settings.
 

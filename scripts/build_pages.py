@@ -9,7 +9,7 @@ from pathlib import Path
 
 import yaml
 
-from trainees import mentored_people, plain_author, trainees
+from cvlib import PI, has_star, is_current, mentored_people, person_name, plain_author, split_course, trainees
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_generated"
@@ -28,21 +28,20 @@ def esc(s):
 
 
 # ---------------------------------------------------------------- trainees
-PEOPLE = mentored_people(S)  # rules live in scripts/trainees.py (shared with the PDF build)
+PEOPLE = mentored_people(S)  # rules live in scripts/cvlib.py (shared with the PDF build)
 
 
 # ---------------------------------------------------------------- publications
 def author_html(authors, mentees):
     out = []
     for a in authors:
-        star = "*" in a.replace("**", "")  # ignore the **bold** markup
         plain = plain_author(a)
         s = esc(plain)
-        if plain == "Kephart JL":
+        if plain == PI:
             s = f"<strong>{s}</strong>"
         elif plain in mentees:
             s = f'<span class="mentee">{s}</span>'
-        out.append(s + ("<sup>&ast;</sup>" if star else ""))
+        out.append(s + ("<sup>&ast;</sup>" if has_star(a) else ""))
     return ", ".join(out)
 
 
@@ -63,13 +62,13 @@ def pub_html(p):
 published = S.get("Peer-Reviewed Publications", [])
 review = S.get("Manuscripts Under Review", [])
 
-lines = [f'<p class="pub-legend"><strong>Kephart JL</strong> &middot; '
+lines = [f'<p class="pub-legend"><strong>{esc(PI)}</strong> &middot; '
          f'<span class="mentee">lab trainee</span> &middot; <sup>&ast;</sup> co-first or co-senior author &middot; '
          f'{len(published)} published, {len(review)} under review</p>']
 by_year = {}
 for p in published:
-    by_year.setdefault(str(p.get("date", "Other")), []).append(p)
-for y in sorted(by_year, reverse=True):
+    by_year.setdefault(str(p.get("date") or "Other"), []).append(p)
+for y in sorted(by_year, key=lambda y: (y.isdigit(), y), reverse=True):  # years first, "Other" last
     lines.append(f"\n## {y}\n")
     lines += [pub_html(p) for p in by_year[y]]
 if review:
@@ -97,9 +96,8 @@ LAB_ROLE_ORDER = ["Postdoctoral fellow", "PhD student", "Graduate research assis
 
 
 def parse_person(entry):
-    name = re.split(r"[.,]", entry["name"], maxsplit=1)[0].strip()
     prog = re.sub(r",\s*(Dornsife|Drexel University).*$", "", entry.get("program", "")).strip()
-    return name, prog, entry.get("position", "")
+    return person_name(entry), prog, entry.get("position", "")
 
 
 lab = [e for sec, es in S.items() if sec.startswith("Mentoring") for e in es if e.get("lab_role")]
@@ -114,7 +112,7 @@ for e in lab:
     seen.add(name)
     d = str(e.get("date", ""))
     rec = {"name": name, "role": e["lab_role"], "program": prog, "now": now, "date": d}
-    (current if "present" in d else alumni).append(rec)
+    (current if is_current(d) else alumni).append(rec)
 
 cards = []
 for p in current:
@@ -158,14 +156,11 @@ taught = S.get(T_CLASS, []) + S.get(T_SHORT, [])
 courses = years_by_item([e for e in taught if is_drexel(e)])  # the website lists Drexel courses
 tl = ["## Courses\n", "*Dornsife School of Public Health, Drexel University*\n"]
 for name, yrs in courses.items():
-    if ", " in name.split(" (")[0]:      # 'Title, EOH 642 (3 credits)' / 'Title, Summer Institute (15 hrs)'
-        title, _, detail = name.rpartition(", ")
-    else:                                # 'Title (Master's-level independent study; 1 student)'
-        p = re.match(r"^(.*?) \((.*)\)$", name)
-        title, detail = p.groups() if p else (name, "")
+    title, kind, detail = split_course(name)  # 'Title, EOH 642 (3 credits)' (shared with the PDF build)
+    meta = f"{kind} ({detail})" if kind else ""
     yrs_s = ", ".join(sorted(set(yrs), reverse=True))
-    tl.append(f'<div class="course"><div class="course-title">{esc(title or name)}</div>'
-              f'<div class="course-meta">{esc(detail)} &middot; {yrs_s}</div></div>')
+    tl.append(f'<div class="course"><div class="course-title">{esc(title)}</div>'
+              f'<div class="course-meta">{esc(meta)}{" &middot; " if meta else ""}{yrs_s}</div></div>')
 
 other = S.get(T_OTHER, [])
 workshops = ([e for e in taught if not is_drexel(e)]  # e.g. conference short courses
@@ -190,15 +185,10 @@ write("teaching.md", "\n".join(tl))
 
 # ---------------------------------------------------------------- media
 media = []
-for e in S.get("Media and Research Dissemination", []):
-    text = e["name"]
-    m = re.search(r"(https?://\S+)$", text)
-    url = m.group(1) if m else None
-    body = text[: m.start()].strip() if m else text
-    outlet, _, rest = body.partition(". ")
-    headline = rest.split(". ")[0] if rest else ""
-    h = f"[{esc(headline)}]({url})" if url and headline else esc(headline)
-    media.append(f"- **{esc(outlet)}** ({e.get('date', '')}): {h}")
+for e in S.get("Media and Research Dissemination", []):  # fields: name (headline), outlet, note, day, url
+    headline = esc(e["name"])
+    h = f"[{headline}]({e['url']})" if e.get("url") else headline
+    media.append(f"- **{esc(e['outlet'])}** ({e.get('date', '')}): {h}")
 write("media.md", "\n".join(media))
 
 print(f"build_pages: {len(published)} pubs, {len(review)} under review, "

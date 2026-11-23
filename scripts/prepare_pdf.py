@@ -1,61 +1,63 @@
-"""Write _build/cv.yml: a copy of _data/cv.yml with PDF-only markup, for RenderCV.
+"""Write _build/cv.yml: a copy of _data/cv.yml with PDF-only layout, for RenderCV.
 
-- Underlines trainee authors (same rules as the website: scripts/trainees.py) using
-  Typst's #underline[...], which RenderCV passes through unescaped.
-- Turns Peer-Reviewed Publications and Manuscripts Under Review into numbered,
-  one-line citations (RenderCV NumberedEntry). The website still uses the structured fields.
-- Turns Mentoring entries' structured fields into plain-text, date-on-the-left entries
-  (RenderCV OneLineEntry + our OneLineEntry.j2.typ override), like the Bilal CV format.
-- Lays out grants the same way: funder and dates, investigators and total costs, title.
-- Groups Teaching entries under institution sub-headings, merging repeat offerings' years,
-  and lays out the other list sections (see DATE_LEFT), plus Education and Experience,
-  date-left, with `group` or `institution` sub-headings.
-- Turns "Group: Sub" section names into a group heading printed once plus sub-headings.
-- Copies pdf_templates/<theme>/ next to it. RenderCV looks for <theme>/<template> beside
-  the input file before using its built-in templates; our SectionBeginning override
-  prints the publication key under the Peer-Reviewed Publications heading.
+_data/cv.yml holds content only; all PDF formatting is added here:
+- Publications and manuscripts under review become numbered one-line citations (RenderCV
+  NumberedEntry), with trainee authors underlined (rules in scripts/cvlib.py, shared with the
+  website) using Typst's #underline[...], which RenderCV passes through unescaped.
+- Most other sections become date-on-the-left plain-text entries (RenderCV OneLineEntry, drawn by
+  pdf_templates/classic/entries/OneLineEntry.j2.typ):
+  - Education ('PhD/2019  Institution (Field)'), Experience ('2022-present  Position, Organization');
+  - Mentoring, with indented lines for thesis, current position and awards;
+  - grants in three rows (funder | dates, investigators | total costs, title);
+  - Teaching, grouped under institution sub-headings with repeat offerings merged onto one line;
+  - the list sections in DATE_LEFT, with optional `group`/`institution` sub-headings.
+- "Group: Sub" section names become a group heading printed once plus sub-headings
+  (pdf_templates/classic/SectionBeginning.j2.typ); see PDF_GROUPS for sections grouped only here.
+- pdf_templates/<theme>/ is copied next to the output; RenderCV looks for <theme>/<template>
+  beside its input file before using its built-in templates.
 
-_data/cv.yml stays plain; never edit _build/ by hand.
+Run validate_cv.py first to catch data errors. Never edit _build/ by hand; it is rebuilt each run.
 """
+import os
 import re
 import shutil
+import stat
 from pathlib import Path
 
 import yaml
 
-from trainees import mentored_people, plain_author, trainees
+from cvlib import (GROUP_NEXT, GROUP_START, LABEL_GRANT, LABEL_SUBHEAD, PI, RIGHT, SUBLINE,
+                   has_star, is_course_code, mentored_people, plain_author, split_course, trainees)
 
 ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / "_build"
-BUILD.mkdir(exist_ok=True)
+
+
+def _clear_readonly(func, path, _exc):  # Windows: copied folders can be read-only
+    os.chmod(path, stat.S_IWRITE)
+    func(path)
+
+
+if BUILD.exists():  # start clean: no stale templates or outputs from earlier runs
+    shutil.rmtree(BUILD, onexc=_clear_readonly)
+BUILD.mkdir()
 
 PUB_SECTIONS = ["Peer-Reviewed Publications", "Manuscripts Under Review"]
+GRANT_SECTIONS = ["Active Grants", "Completed Grants"]
+DATE_LEFT = ("Editorial and Review Activities", "Presentations", "Honors and Awards",
+             "Professional Activities", "Media and Research Dissemination", "Academic Service",
+             "Community Service", "Skills and Certifications")
+PDF_GROUPS = {  # sections the website reads by these exact names, grouped in the PDF only
+    "Peer-Reviewed Publications": "Publications: Peer-Reviewed Publications",
+    "Manuscripts Under Review": "Publications: Manuscripts Under Review",
+    "Briefs and Outreach": "Publications: Briefs and Outreach",
+    "Media and Research Dissemination": "Publications: Media and Research Dissemination",
+    "Active Grants": "Research Grant Participation: Active",
+    "Completed Grants": "Research Grant Participation: Completed",
+}
 
 data = yaml.safe_load((ROOT / "_data" / "cv.yml").read_text(encoding="utf-8"))
 S = data["cv"]["sections"]
-people = mentored_people(S)
-
-n = 0
-for sec in PUB_SECTIONS:
-    for pub in S.get(sec, []):
-        marked = trainees(pub, people)
-        new = []
-        for a in pub["authors"]:
-            name = plain_author(a)
-            if name in marked and name != "Kephart JL":
-                star = "*" in a.replace("**", "")
-                a = f"#underline[{name}]" + ("\\*" if star else "")
-                n += 1
-            new.append(a)
-        pub["authors"] = new
-
-
-def cite_author(a):
-    """Keep bold/underline markup; normalize any co-first/co-senior star to an escaped \\*."""
-    star = "*" in a.replace("**", "").replace("\\*", "") or "\\*" in a
-    a = a.replace("\\*", "")
-    a = a[:-1] if a.endswith("*") and not a.endswith("**") else a
-    return a.strip() + ("\\*" if star else "")
 
 
 def sentence(s):
@@ -63,9 +65,18 @@ def sentence(s):
     return s if s[-1:] in ".?!" else s + "."
 
 
-def citation(p):
-    """'Authors. Title. Journal. Year. doi:...' as one line, like a standard academic CV."""
-    parts = [sentence(", ".join(cite_author(a) for a in p["authors"])), sentence(p["title"])]
+# ---------------------------------------------------------------- publications
+def cite_author(a, trainee):
+    """'**Kephart JL**' stays bold; trainees are underlined; any star becomes an escaped \\*."""
+    name = plain_author(a)
+    shown = f"**{name}**" if name == PI else (f"#underline[{name}]" if trainee else name)
+    return shown + ("\\*" if has_star(a) else "")
+
+
+def citation(p, marked):
+    """'Authors. Title. Journal. Year. doi:...' as one line."""
+    authors = ", ".join(cite_author(a, plain_author(a) in marked) for a in p["authors"])
+    parts = [sentence(authors), sentence(p["title"])]
     venue = str(p.get("journal", "")).strip()
     if p.get("date"):
         venue = f"{venue}. {p['date']}" if venue else str(p["date"])
@@ -78,22 +89,31 @@ def citation(p):
     return " ".join(parts)
 
 
-SUBLINE = " ¶ "  # must match pdf_templates/classic/OneLineEntry.j2.typ
+people = mentored_people(S)
+n_underlined = 0
+for sec in PUB_SECTIONS:
+    if sec in S:
+        cites = []
+        for p in S[sec]:
+            marked = trainees(p, people) - {PI}
+            n_underlined += sum(plain_author(a) in marked for a in p["authors"])
+            cites.append({"number": citation(p, marked)})  # newest first; each section restarts at 1
+        S[sec] = cites
 
 
+# ---------------------------------------------------------------- mentoring
 def mentee(e):
-    """Bilal-style mentee entry: 'Name (fellowship). Program: X. With Y. Affiliation.' then
-    indented lines for thesis title, current position and awards."""
+    """'Name (fellowship). Program: X. With Y. Affiliation. Note.' then indented lines for
+    thesis title, current position and awards."""
     head = e["name"] + (f" ({e['fellowship']})" if e.get("fellowship") else "")
     parts = [sentence(head)]
     if e.get("program"):
         parts.append(sentence(f"Program: {e['program']}"))
     if e.get("with"):
         parts.append(sentence(f"With {e['with']}"))
-    if e.get("affiliation"):
-        parts.append(sentence(e["affiliation"]))
-    if e.get("note"):  # e.g. how a faculty mentee is mentored, as in Bilal's CV
-        parts.append(sentence(e["note"]))
+    for key in ("affiliation", "note"):
+        if e.get(key):
+            parts.append(sentence(e[key]))
     lines = [" ".join(parts)]
     if e.get("thesis"):
         lines.append(f"Thesis title: {sentence(e['thesis'])}")
@@ -104,21 +124,16 @@ def mentee(e):
     return {"label": str(e.get("date", "")), "details": SUBLINE.join(lines)}
 
 
-# Mentoring sections print like Bilal's CV: date on the left, plain text, indented sub-lines.
-# They use RenderCV's one-line entry type (unused elsewhere) with our own template.
 for sec in [k for k in S if k.startswith("Mentoring")]:
     S[sec] = [mentee(e) for e in S[sec]]
 
-GRANT_SECTIONS = ["Active Grants", "Completed Grants"]
-RIGHT = " ¦ "  # right-aligned cell separator; must match OneLineEntry.j2.typ
 
-
+# ---------------------------------------------------------------- grants
 def grant(g):
-    """Bilal-style grant: funder | dates, investigators | total costs, then the title."""
     rows = [g["funder"] + RIGHT + str(g.get("date", "")),
             g["investigators"] + (RIGHT + f"Total costs: {g['total_costs']}" if g.get("total_costs") else ""),
             g["name"]]
-    return {"label": "GRANT", "details": SUBLINE.join(rows)}
+    return {"label": LABEL_GRANT, "details": SUBLINE.join(rows)}
 
 
 for sec in GRANT_SECTIONS:
@@ -126,11 +141,17 @@ for sec in GRANT_SECTIONS:
         S[sec] = [grant(g) for g in S[sec]]
 
 
-def year_span(years):
-    """[2026, 2023, 2024] -> '2023-2024, 2026' (Bilal style: repeat offerings on one line)."""
-    ys = sorted({int(y) for y in years if str(y).isdigit()})
-    if not ys:
-        return ", ".join(str(y) for y in years)
+# ---------------------------------------------------------------- date-left lists
+def year_span(dates):
+    """[2026, 2023, '2021-2022'] -> '2021-2023, 2026'. Ranges are expanded before merging; if any
+    date is open-ended ('2024-present') or not year-based, the dates are listed as written."""
+    years = set()
+    for d in dates:
+        m = re.fullmatch(r"(\d{4})(?:-(\d{4}))?", str(d).strip())
+        if not m:
+            return ", ".join(dict.fromkeys(str(x) for x in dates))
+        years.update(range(int(m.group(1)), int(m.group(2) or m.group(1)) + 1))
+    ys = sorted(years)
     runs, start = [], ys[0]
     for a, b in zip(ys, ys[1:] + [None]):
         if b != a + 1:
@@ -140,15 +161,27 @@ def year_span(years):
 
 
 def course_text(name):
-    """'Healthy Housing & Built Environment, EOH 642 (3 credits)' -> 'EOH 642: Healthy Housing ... (3 credits)';
-    'Designing Healthy Homes, Independent Study (3 credits; ...)' -> 'Independent Study: Designing ...'."""
-    m = re.match(r"^(.*), ([A-Z]{2,4} \d{3}|Independent Study) \((.+)\)$", name)
-    return f"{m.group(2)}: {m.group(1)} ({m.group(3)})" if m else name
+    """'Title, EOH 642 (3 credits)' -> 'EOH 642: Title (3 credits)'; also 'Independent Study'.
+    Other shapes (e.g. 'Title, Summer Institute (15 hrs)') are printed as written."""
+    title, kind, detail = split_course(name)
+    return f"{kind}: {title} ({detail})" if is_course_code(kind) else name
 
 
-def date_left(entries, fmt=lambda n: n, merge=False):
-    """Bilal-style list: an optional sub-heading per `group` (or `institution`), then
-    date-on-the-left plain entries. merge=True puts repeats of the same item on one line."""
+def media_text(e):
+    """'**Outlet**. Headline. Note. Mon DD. URL' from the structured media fields."""
+    parts = [f"**{e['outlet']}**.", sentence(e["name"])]
+    if e.get("note"):
+        parts.append(sentence(e["note"]))
+    if e.get("day"):
+        parts.append(sentence(e["day"]))
+    if e.get("url"):
+        parts.append(e["url"])
+    return " ".join(parts)
+
+
+def date_left(entries, fmt=lambda e: e["name"], merge=False):
+    """An optional italic sub-heading per `group` (or `institution`), then date-on-the-left
+    entries. merge=True puts repeats of the same item (same name) on one line."""
     if not all(isinstance(e, dict) for e in entries):
         return entries  # plain-text sections (e.g. the journal reviewer list) stay as they are
     groups = {}
@@ -158,61 +191,36 @@ def date_left(entries, fmt=lambda n: n, merge=False):
     out = []
     for heading, items in groups.items():
         if heading:
-            out.append({"label": "SUBHEAD", "details": heading})
+            out.append({"label": LABEL_SUBHEAD, "details": heading})
         for es in items.values():
             date = year_span([e.get("date", "") for e in es]) if merge else str(es[0].get("date", ""))
-            out.append({"label": date, "details": fmt(es[0]["name"])})
+            out.append({"label": date, "details": fmt(es[0])})
     return out
 
 
-# Teaching: institution sub-headings, repeat offerings merged onto one line.
 for sec in [k for k in S if k.startswith("Teaching")]:
-    S[sec] = date_left(S[sec], lambda n: sentence(course_text(n)), merge=True)
+    S[sec] = date_left(S[sec], lambda e: sentence(course_text(e["name"])), merge=True)
 
-# Education and experience, Bilal style: 'PhD/2019  Institution (Field)' and
-# '2022-present  Position, Organization'; education highlights become indented lines.
 if "Education" in S:
     S["Education"] = [{
         "label": f"{e['degree']}/{e.get('end_date', '')}",
         "details": SUBLINE.join([e["institution"] + (f" ({e['area']})" if e.get("area") else "")]
                                 + list(e.get("highlights") or [])),
     } for e in S["Education"]]
-EXP = "Professional Experience"
-if EXP in S:
-    S[EXP] = [{"label": f"{e.get('start_date', '')}-{e.get('end_date', '')}".strip("-"),
-               "details": f"{e['position']}, {e['company']}"} for e in S[EXP]]
 
-# The other list sections use the same date-left layout, with sub-headings from `group`
-# (e.g. Intramural/Extramural grant review, Languages/Certifications) or `institution`.
-DATE_LEFT = ("Editorial and Review Activities", "Presentations", "Honors and Awards",
-             "Professional Activities", "Media and Research Dissemination", "Academic Service",
-             "Community Service", "Skills and Certifications")
-def bold_outlet(text):
-    """Media entries start with the outlet ('Philadelphia Inquirer. Title...'): bold it."""
-    outlet, sep, rest = text.partition(". ")
-    return f"**{outlet}**{sep}{rest}" if sep else text
-
+if "Professional Experience" in S:
+    S["Professional Experience"] = [
+        {"label": f"{e.get('start_date', '')}-{e.get('end_date', '')}".strip("-"),
+         "details": f"{e['position']}, {e['company']}"} for e in S["Professional Experience"]]
 
 for sec in [k for k in S if k.startswith(DATE_LEFT)]:
-    S[sec] = date_left(S[sec], bold_outlet if sec == "Media and Research Dissemination" else (lambda n: n))
+    S[sec] = date_left(S[sec], media_text if sec == "Media and Research Dissemination" else (lambda e: e["name"]))
 
-# Numbered citation-style entries, newest first (1 = most recent); each section restarts at 1.
-for sec in PUB_SECTIONS:
-    if sec in S:
-        S[sec] = [{"number": citation(p)} for p in S[sec]]
-
-# Two heading levels. RenderCV has one, so cv.yml names grouped sections "Group: Sub". Here the
-# first section of each run of a group becomes "Group ⟫ Sub" and the rest "Group › Sub";
-# SectionBeginning.j2.typ prints the large group heading once, then a smaller sub-heading.
-GROUP_START, GROUP_NEXT = " ⟫ ", " › "  # must match SectionBeginning.j2.typ
-PDF_GROUPS = {  # sections the website reads by these exact names, grouped in the PDF only
-    "Peer-Reviewed Publications": "Publications: Peer-Reviewed Publications",
-    "Manuscripts Under Review": "Publications: Manuscripts Under Review",
-    "Briefs and Outreach": "Publications: Briefs and Outreach",
-    "Media and Research Dissemination": "Publications: Media and Research Dissemination",
-    "Active Grants": "Research Grant Participation: Active",
-    "Completed Grants": "Research Grant Participation: Completed",
-}
+# ---------------------------------------------------------------- two heading levels
+# RenderCV has one heading level, so cv.yml names grouped sections "Group: Sub". The first section
+# of each run of a group becomes "Group ⟫ Sub" and the rest "Group › Sub"; SectionBeginning.j2.typ
+# prints the large group heading once, then a smaller sub-heading. Keep a group's sections
+# adjacent in cv.yml, or its heading prints again.
 renamed, prev = {}, None
 for key, entries in S.items():
     group, sep, sub = PDF_GROUPS.get(key, key).partition(": ")
@@ -229,6 +237,6 @@ data["cv"]["sections"] = renamed
 
 for theme_dir in (ROOT / "pdf_templates").iterdir():
     if theme_dir.is_dir():
-        shutil.copytree(theme_dir, BUILD / theme_dir.name, dirs_exist_ok=True)
+        shutil.copytree(theme_dir, BUILD / theme_dir.name)
 
-print(f"prepare_pdf: underlined {n} trainee author entries -> _build/cv.yml (+ template overrides)")
+print(f"prepare_pdf: underlined {n_underlined} trainee author entries -> _build/cv.yml (+ template overrides)")

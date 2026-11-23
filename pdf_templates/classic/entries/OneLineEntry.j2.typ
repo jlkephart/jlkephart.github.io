@@ -1,7 +1,9 @@
-{# Override of RenderCV 2.8's built-in typst/entries/OneLineEntry.j2.typ. This CV uses one-line
-   entries only for entries that prepare_pdf.py lays out like the Bilal CV (plain, not bold text):
-   - Mentoring: `label` is the date, shown in a left column; `details` is the description, with
-     extra indented lines (thesis, current position, awards) separated by " ¶ ".
+{# Override of RenderCV 2.8's built-in typst/entries/OneLineEntry.j2.typ. prepare_pdf.py turns
+   most sections (education, experience, honors, grants, service, review, mentoring, teaching,
+   presentations, media, skills) into one-line entries drawn here in plain (not bold) text. The
+   labels and separators are constants in scripts/cvlib.py (LABEL_*, SUBLINE " ¶ ", RIGHT " ¦ "):
+   - Dated entries: `label` is the date, shown in a left column; `details` is the text, with any
+     extra lines (thesis, current position, awards, highlights) separated by " ¶ " and indented.
    - Grants: `label` is "GRANT"; `details` holds rows separated by " ¶ ", and a row may have
      right-aligned text after " ¦ " (dates, total costs).
    - Sub-headings (e.g. institutions in Teaching): `label` is "SUBHEAD", `details` is the text. #}

@@ -1,17 +1,18 @@
 {# Override of RenderCV 2.8's built-in typst/SectionBeginning.j2.typ. Changes from the original:
-   1. the publication-key block under Peer-Reviewed Publications;
-   2. numbered-citation and mentoring sections (NumberedEntry / OneLineEntry, built by
-      prepare_pdf.py) skip RenderCV's
-      content-area wrapper, which is an unbreakable block when entries.allow_page_break is
-      false: a 41-item list then jumps to a new page and overflows into the footer. They get
-      an equivalent breakable block instead, closed in SectionEnding.j2.typ.
-   3. two heading levels: prepare_pdf.py names grouped sections "Group ⟫ Sub" (first section
-      of a group) or "Group › Sub" (the rest). The first prints the group as the normal
-      section heading plus a smaller sub-heading; the rest print only the sub-heading, so
-      RenderCV treats the whole group as one section.
+   1. Two heading levels. prepare_pdf.py names grouped sections "Group ⟫ Sub" (first section of a
+      group) or "Group › Sub" (the rest); the markers are GROUP_START/GROUP_NEXT in
+      scripts/cvlib.py. The first prints the group as the normal section heading plus a smaller
+      sub-heading; the rest print only the sub-heading, so RenderCV treats the whole group as one
+      section.
+   2. The asterisk/underline key under the Peer-Reviewed Publications heading.
+   3. Text-based sections (NumberedEntry, OneLineEntry, TextEntry, BulletEntry: nearly every
+      section once prepare_pdf.py has run) skip RenderCV's content-area wrapper, which is an
+      unbreakable block when entries.allow_page_break is false: a 41-item list then jumps to a new
+      page and overflows into the footer. They get an equivalent breakable block instead, closed in
+      SectionEnding.j2.typ.
    RenderCV uses this copy because prepare_pdf.py places it at _build/classic/, next to the
    generated CV file. If RenderCV's own template changes in a future version, re-copy it and
-   re-add the blocks below. #}
+   re-apply these changes. #}
 {% set sub_style = "#block(sticky: true, above: 1.1em, below: 0.8em)[#text(size: 1.12em, weight: \"bold\", fill: " ~ design.colors.section_titles.as_rgb() ~ ")[" %}
 {% if " ⟫ " in section_title %}{% set parts = section_title.split(" ⟫ ", 1) %}
 == {{ parts[0] }}
@@ -23,7 +24,7 @@
 {% else %}
 == {{section_title}}
 {% endif %}
-{% if section_title.endswith("Peer-Reviewed Publications") %}
+{% if section_title in ["Peer-Reviewed Publications", "Publications ⟫ Peer-Reviewed Publications", "Publications › Peer-Reviewed Publications"] %}
 
 #block(below: 0.8em)[#pad(left: {{ design.entries.side_space }})[#sym.ast.basic co-first or co-senior authorship; #underline[underlined] authors were mentored scholars at the time of first submission.]]
 {% endif %}

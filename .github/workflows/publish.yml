@@ -4,40 +4,45 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "0 10 * * 1"   # weekly rebuild, Mondays
+    - cron: "0 10 * * 1"   # weekly rebuild, Mondays (keeps date-dependent trainee underlines current)
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false   # let a running deploy finish; the next run queues behind it
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install RenderCV and PyYAML
-        # Pinned: pdf_templates/ overrides a 2.8 template. Re-check it before bumping.
-        run: pip install "rendercv[full]==2.8" pyyaml
+        # Pinned in requirements.txt: pdf_templates/ overrides RenderCV 2.8 templates. Re-check them before bumping.
+        run: pip install -r requirements.txt
+
+      - name: Check cv.yml
+        run: python scripts/validate_cv.py
 
       - name: Build CV PDF from cv.yml
         run: |
-          python scripts/prepare_pdf.py   # trainee underlines + template override -> _build/
+          python scripts/prepare_pdf.py   # PDF layout + template overrides -> _build/
           rendercv render _build/cv.yml -nopng -nomd -nohtml
           mkdir -p assets
           cp _build/rendercv_output/*.pdf assets/cv.pdf
 
       - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18   # pinned; bump deliberately after a local test
 
       - name: Generate pages from cv.yml
         run: python scripts/build_pages.py
@@ -45,16 +50,19 @@ jobs:
       - name: Render site
         run: quarto render
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
