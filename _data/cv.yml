@@ -1262,7 +1262,7 @@ cv:
     'Mentoring: Postdoctoral Fellows':
     - name: Hanna Jardel, PhD
       date: 2024-2025
-      position: Fellow at NIH/NIEHS
+      position: Fellow (Epidemiology Branch, NIEHS)
       lab_role: Postdoctoral fellow
     'Mentoring: Advisees (Doctoral)':
     - name: Annaka Scheeres
@@ -1281,6 +1281,7 @@ cv:
     - name: Leslie Howze
       date: 2024-2026
       program: MPH in Urban Health, Dornsife School of Public Health, Drexel University
+      position: Infant Health Equity Fellow (Healthy Start Inc.)
       lab_role: MPH advisee
     - name: Angela Tung
       date: 2024-2026
@@ -1301,6 +1302,7 @@ cv:
     - name: Jalayna Antoine
       date: 2023-2024
       program: MPH in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+      position: Flood Resilience Project Manager (City of Philadelphia)
       lab_role: MPH advisee
     'Mentoring: Doctoral Thesis Advisory Committee Member':
     - name: Juan Carlos Figueroa
@@ -1318,9 +1320,11 @@ cv:
     - name: Shreya Patel
       date: 2024-2026
       program: PhD in Epidemiology, Dornsife School of Public Health, Drexel University
+      position: Postdoctoral Fellow (Milken Institute School of Public Health, George Washington University)
     - name: Jaime Reyes Sanchez
       date: 2024-2026
       program: PhD in Epidemiology, University of Southern California
+      position: Postdoctoral Fellow (University of California, Davis)
     - name: Lisa Frueh
       date: 2023-present
       program: PhD in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
@@ -1350,10 +1354,11 @@ cv:
       date: 2024
       program: PhD in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
     'Mentoring: Master Research Advisor/Supervisor':
-    - name: Victoria Rodríguez
+    - name: Victoria Rodríguez Villarreal
       date: 2025
       fellowship: APE practicum
       program: MPH in Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
+      position: Advocacy and Mexican Delegation Coordinator (Latinas por el Clima)
       lab_role: MPH practicum student
     - name: Gary Malpartida Guzmán, BS
       date: 2020-2022
@@ -1361,27 +1366,27 @@ cv:
     - name: Maria Jolly, BS
       date: 2017-2018
       program: MS in Public Health, Emory University
-      position: Project Manager (CDC)
+      position: Project Manager Trainer (Georgia Power Company)
     - name: Ariadne Villegas, BA
       date: 2017-2018
       program: MS in Public Health, Johns Hopkins University
-      position: Research Associate (Public Health Institute)
+      position: Senior Program Manager (The Greenlining Institute)
     - name: Lena Stashko, BS
       date: 2017-2018
       program: MS in Public Health, Johns Hopkins University
-      position: Senior Global Health Consultant (Sassenach Inc.)
+      position: Senior Associate (Linksbridge)
     - name: Abigail Winiker, BA
       date: 2017-2018
       program: MS in Public Health, Johns Hopkins University
-      position: PhD student (Johns Hopkins University)
+      position: Assistant Scientist (Johns Hopkins Bloomberg School of Public Health)
     - name: Dina Goodman, BA
       date: 2016-2017
       program: MS in Public Health, Johns Hopkins University
-      position: PhD candidate (Harvard University)
+      position: Senior Manager (AbbVie)
     - name: Elizabeth Fung, BS
       date: 2016-2017
       program: MS in Public Health, Johns Hopkins University
-      position: Medical student (University of California at Davis)
+      position: Anesthesiologist
     'Mentoring: Graduate Research Assistants or Research Fellows':
     - name: Paula Garcia
       date: 2025-present
@@ -1401,10 +1406,12 @@ cv:
       date: 2023-2025
       fellowship: Urban Health Collaborative Fellow
       program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University
+      position: Medical student
       lab_role: Graduate research assistant
     - name: Emily Shingara
       date: 2023-2024
       program: MPH in Epidemiology, Dornsife School of Public Health, Drexel University
+      position: PhD student in Environmental Health (Milken Institute School of Public Health, George Washington University)
       lab_role: Graduate research assistant
     - name: Cassandra Stuart
       date: 2022-2023
@@ -1429,6 +1436,7 @@ cv:
     - name: Saachi Nangia
       date: 2016-2017
       program: BS in Biology, Johns Hopkins University
+      position: Pediatrician (Lawrence County Memorial Hospital)
     'Mentoring: Other mentored fellows':
     - name: Yuquan Zhou
       date: 2026-present
@@ -1480,6 +1488,7 @@ cv:
     - name: Cusi Ferradas, MPH
       date: 2018
       fellowship: MPH Alumni Program, Johns Hopkins Bloomberg School of Public Health
+      position: Postdoctoral Fellow (University of Texas Medical Branch at Galveston)
     - name: Takako Kanakubo, MPH
       date: 2017
       fellowship: MPH Alumni Program, Johns Hopkins Bloomberg School of Public Health
