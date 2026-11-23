@@ -92,6 +92,8 @@ def mentee(e):
         parts.append(sentence(f"With {e['with']}"))
     if e.get("affiliation"):
         parts.append(sentence(e["affiliation"]))
+    if e.get("note"):  # e.g. how a faculty mentee is mentored, as in Bilal's CV
+        parts.append(sentence(e["note"]))
     lines = [" ".join(parts)]
     if e.get("thesis"):
         lines.append(f"Thesis title: {sentence(e['thesis'])}")

@@ -4,7 +4,8 @@
 # `co_first_or_senior`. Names in **bold** are Kephart JL.
 # Mentoring sections are by role (a person can appear in several). Entries: `name` (with optional
 # credential), `date`, and optional `fellowship` (shown in parentheses), `program`, `with`
-# (co-advisor), `affiliation`, `thesis` (thesis title), `position` (current position) and `award`
+# (co-advisor), `affiliation`, `note` (e.g. how a faculty mentee is mentored), `thesis` (thesis
+# title), `position` (current position) and `award`
 # (written as a sentence, e.g. "Awarded the ... Award"). `lab_role` puts the person on the
 # website People page with that label.
 
@@ -1251,6 +1252,13 @@ cv:
     - name: Group Facilitation Certification, Latino Commission on AIDS
       date: 2010
       group: Certifications
+    'Mentoring: Faculty Mentees':
+    - name: Jinwen Xu, PhD, Assistant Professor (Coastal Carolina University)
+      date: 2026-present
+      note: Mentored through the SALURBAL-Climate Mentorship Program
+    - name: Nelum Hapuhinna, PhD, Assistant Professor (Northern Kentucky University)
+      date: 2025-present
+      note: Mentored through the ISEE Early Career Mentoring Program
     'Mentoring: Postdoctoral Fellows':
     - name: Hanna Jardel, PhD
       date: 2024-2025
@@ -1446,10 +1454,6 @@ cv:
       date: 2026-present
       fellowship: ISEE Early Career Mentoring Program
       affiliation: PhD student, University of Washington
-    - name: Nelum Hapuhinna
-      date: 2025-present
-      fellowship: ISEE Early Career Mentoring Program
-      affiliation: Assistant Professor, Northern Kentucky University
     - name: Jing Wang
       date: 2025-2026
       fellowship: ISEE Early Career Mentoring Program
