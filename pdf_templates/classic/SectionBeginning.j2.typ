@@ -12,7 +12,7 @@
    RenderCV uses this copy because prepare_pdf.py places it at _build/classic/, next to the
    generated CV file. If RenderCV's own template changes in a future version, re-copy it and
    re-add the blocks below. #}
-{% set sub_style = "#block(sticky: true, above: 1.1em, below: 0.6em)[#text(size: 1.12em, weight: \"bold\", fill: " ~ design.colors.section_titles.as_rgb() ~ ")[" %}
+{% set sub_style = "#block(sticky: true, above: 1.1em, below: 0.8em)[#text(size: 1.12em, weight: \"bold\", fill: " ~ design.colors.section_titles.as_rgb() ~ ")[" %}
 {% if " ⟫ " in section_title %}{% set parts = section_title.split(" ⟫ ", 1) %}
 == {{ parts[0] }}
 

@@ -1851,3 +1851,5 @@ cv:
       date: 2014
 design:
   theme: classic
+  section_titles:
+    space_below: 0.4cm  # RenderCV default 0.3cm; a little more room under headings
