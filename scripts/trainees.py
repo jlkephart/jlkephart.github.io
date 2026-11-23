@@ -48,7 +48,11 @@ def _is_mentored(author, year, people):
         return False
     sur, ini = norm(m.group(1)), m.group(2)[0].lower()
     for full, start, end in people:
-        if full.endswith(" " + sur) and full[0] == ini:
+        # Surname matches the end of the name, or the first part of a compound surname
+        # (e.g. "Malpartida G" for "Gary Malpartida Guzman"), never the first name.
+        given_rest = full.split(" ", 1)[1] if " " in full else ""
+        if (full.endswith(" " + sur) or given_rest.startswith(sur + " ")
+                or (" " + sur + " ") in (" " + given_rest)) and full[0] == ini:
             if year is None and end >= THIS_YEAR - 1:
                 return True
             if year is not None and start <= year <= end + 1:
