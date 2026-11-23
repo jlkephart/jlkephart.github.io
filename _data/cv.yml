@@ -30,7 +30,7 @@ cv:
       end_date: 2008
       highlights:
       - With distinction
-    Academic and Professional Experience:
+    Professional Experience:
     - position: Assistant Professor (tenure-track)
       company: Environmental and Occupational Health, Dornsife School of Public Health, Drexel University
       start_date: 2022
@@ -81,6 +81,62 @@ cv:
       company: Obreros de la Viña, Guanaja, Honduras
       start_date: 2002
       end_date: 2005
+    'Professional Activities: Society Membership':
+    - name: Society for Epidemiologic Research
+      date: 2021-present
+    - name: International Society for Urban Health
+      date: 2021-present
+    - name: International Society for Environmental Epidemiology
+      date: 2018-present
+    - name: Delta Omega National Public Health Honorary Society
+      date: 2013-present
+    - name: American Public Health Association
+      date: 2012-present
+    - name: American Association of Geographers
+      date: 2011-2015
+    'Professional Activities: Other Professional Activities':
+    - name: IPCC Special Report on Climate Change and Cities, Expert reviewer
+      date: 2025
+    - name: ISEE-North America Chapter mentoring program, Lead mentor
+      date: 2025-present
+    - name: Informed Population Health Opinions (INPHO) survey, Panelist
+      date: 2022-present
+    'Editorial and Review Activities: Peer Review Activities. Journal Editorial Boards':
+    - name: Mladá Veda (Young Science), Editorial Board Member
+      date: 2026-present
+    'Editorial and Review Activities: Peer Review Activities. Grant Proposal or Fellowship Applicant Reviewer':
+    - name: Invited reviewer, National Institutes of Health, PDAH study section
+      date: 2026
+      group: Extramural
+    - name: Community Resilience and Environmental Justice Fund, City of Philadelphia
+      date: 2026
+      group: Extramural
+    - name: Admissions Committee, Urban Epidemiology Fellowship, Philadelphia Department of Public Health/Drexel Urban
+        Health Collaborative
+      date: 2026
+      group: Intramural (Drexel University)
+    - name: Publications and Proposals Review Committee, SALURBAL Project
+      date: 2021-present
+      group: Intramural (Drexel University)
+    - name: Doctoral Fellowship reviewer, Urban Health Collaborative
+      date: 2022, 2024
+      group: Intramural (Drexel University)
+    - name: Judge, Drexel University School of Biomedical Sciences and Professional Studies Discovery Day
+      date: 2019
+      group: Intramural (Drexel University)
+    'Editorial and Review Activities: Peer Review Activities. Journal Reviewer':
+    - Age and Ageing, American Journal of Preventive Medicine, Applied Sciences, British Medical Journal (BMJ), Energy
+      Research & Social Science, Environment International, Environmental Health Perspectives, Environmental Research,
+      GeoHealth, Health and Place, Heart, Indoor Air, International Journal of Biometeorology, International Journal
+      of Environmental Research and Public Health, Journal of Exposure Science and Environmental Epidemiology, Journal
+      of Occupational and Environmental Hygiene, Journal of Urban Health, The Lancet Global Health, The Lancet Planetary
+      Health, Nature Aging, Nature Medicine, Nature Cities, One Earth, PLOS ONE, Science Advances, Scientific Reports,
+      Urban Climate
+    'Editorial and Review Activities: Review of Abstracts for Scientific Meetings':
+    - name: International Society for Environmental Epidemiology Annual Meeting
+      date: 2021-2026
+    - name: Society for Epidemiologic Research Annual Meeting
+      date: 2022
     Honors and Awards:
     - name: GeoCAFE Scholar, US National Science Foundation
       date: 2025
@@ -1186,62 +1242,15 @@ cv:
       funder: Johns Hopkins Center for Global Health
       investigators: Kephart, Awardee
       total_costs: $3,000
-    'Professional Activities: Society Membership':
-    - name: Society for Epidemiologic Research
-      date: 2021-present
-    - name: International Society for Urban Health
-      date: 2021-present
-    - name: International Society for Environmental Epidemiology
-      date: 2018-present
-    - name: Delta Omega National Public Health Honorary Society
+    Skills and Certifications:
+    - name: Spanish – Professional working proficiency
+      group: Languages
+    - name: Certified in Public Health (CPH), National Board of Public Health Examiners
       date: 2013-present
-    - name: American Public Health Association
-      date: 2012-present
-    - name: American Association of Geographers
-      date: 2011-2015
-    'Professional Activities: Other Professional Activities':
-    - name: IPCC Special Report on Climate Change and Cities, Expert reviewer
-      date: 2025
-    - name: ISEE-North America Chapter mentoring program, Lead mentor
-      date: 2025-present
-    - name: Informed Population Health Opinions (INPHO) survey, Panelist
-      date: 2022-present
-    'Editorial and Review Activities: Peer Review Activities. Journal Editorial Boards':
-    - name: Mladá Veda (Young Science), Editorial Board Member
-      date: 2026-present
-    'Editorial and Review Activities: Peer Review Activities. Grant Proposal or Fellowship Applicant Reviewer':
-    - name: Invited reviewer, National Institutes of Health, PDAH study section
-      date: 2026
-      group: Extramural
-    - name: Community Resilience and Environmental Justice Fund, City of Philadelphia
-      date: 2026
-      group: Extramural
-    - name: Admissions Committee, Urban Epidemiology Fellowship, Philadelphia Department of Public Health/Drexel Urban
-        Health Collaborative
-      date: 2026
-      group: Intramural (Drexel University)
-    - name: Publications and Proposals Review Committee, SALURBAL Project
-      date: 2021-present
-      group: Intramural (Drexel University)
-    - name: Doctoral Fellowship reviewer, Urban Health Collaborative
-      date: 2022, 2024
-      group: Intramural (Drexel University)
-    - name: Judge, Drexel University School of Biomedical Sciences and Professional Studies Discovery Day
-      date: 2019
-      group: Intramural (Drexel University)
-    'Editorial and Review Activities: Peer Review Activities. Journal Reviewer':
-    - Age and Ageing, American Journal of Preventive Medicine, Applied Sciences, British Medical Journal (BMJ), Energy
-      Research & Social Science, Environment International, Environmental Health Perspectives, Environmental Research,
-      GeoHealth, Health and Place, Heart, Indoor Air, International Journal of Biometeorology, International Journal
-      of Environmental Research and Public Health, Journal of Exposure Science and Environmental Epidemiology, Journal
-      of Occupational and Environmental Hygiene, Journal of Urban Health, The Lancet Global Health, The Lancet Planetary
-      Health, Nature Aging, Nature Medicine, Nature Cities, One Earth, PLOS ONE, Science Advances, Scientific Reports,
-      Urban Climate
-    'Editorial and Review Activities: Review of Abstracts for Scientific Meetings':
-    - name: International Society for Environmental Epidemiology Annual Meeting
-      date: 2021-2026
-    - name: Society for Epidemiologic Research Annual Meeting
-      date: 2022
+      group: Certifications
+    - name: Group Facilitation Certification, Latino Commission on AIDS
+      date: 2010
+      group: Certifications
     'Mentoring: Postdoctoral Fellows':
     - name: Hanna Jardel, PhD
       date: 2024-2025
@@ -1560,6 +1569,71 @@ cv:
     - name: Spatial Data Technologies for Mapping, Teaching Assistant
       date: 2016
       institution: Johns Hopkins Bloomberg School of Public Health, Baltimore, MD
+    Academic Service:
+    - name: Drexel University Council on Core Competencies
+      date: 2026-present
+      institution: Drexel University, Philadelphia, PA
+    - name: Faculty Advisor, Public Health Doctoral Student Advisory Group
+      date: 2024-present
+      institution: Drexel University, Philadelphia, PA
+    - name: Committee, PhD Program in Environmental and Occupational Health
+      date: 2023-present
+      institution: Drexel University, Philadelphia, PA
+    - name: Department Representative (Environmental and Occupational Health), Executive Committee of Faculty, Dornsife
+        School of Public Health
+      date: 2023-present
+      institution: Drexel University, Philadelphia, PA
+    - name: Committee, MS Program in Environmental and Occupational Health
+      date: 2023-2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Founder & co-leader, Climate Change and Health Equity Working Group
+      date: 2022-2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Faculty Advisory Board, Public Health Doctoral Student Advisory Group
+      date: 2022-2024
+      institution: Drexel University, Philadelphia, PA
+    - name: Planning committee, Global Non-Communicable Diseases Symposium
+      date: 2018
+      institution: Johns Hopkins University, Baltimore, MD
+    - name: Planning committee, Global Non-Communicable Diseases Symposium
+      date: 2017
+      institution: Johns Hopkins University, Baltimore, MD
+    - name: Co-founder, Refuel Our Future, student group advocating for University fossil fuel divestment
+      date: 2012-2013
+      institution: Johns Hopkins University, Baltimore, MD
+    - name: Student Representative, Save Darfur Coalition
+      date: 2006-2008
+      institution: George Mason University, Fairfax, VA
+    - name: Vice President (elected), Society for Black Students’ Concerns
+      date: 2004-2005
+      institution: Northern Virginia Community College, Annandale, VA
+    Community Service:
+    - name: Expert reviewer, City of Philadelphia, Environmental Justice Mapping Tool
+      date: 2026
+    - name: Expert advisor, City of Boston, Streets Cabinet, street lighting and safety
+      date: 2025-present
+    - name: Expert reviewer, City of Philadelphia, Heat Vulnerability Assessment
+      date: 2025
+    - name: Educational programming on heat and health for local youth, Esperanza, community-based organization
+        in North Philly. Philadelphia, PA.
+      date: 2025
+    - name: Invited speaker, Philadelphia Climate Justice Collective Town Hall.
+      date: 2025
+    - name: Advise local environmental justice group on surveying and advocating for community-identified environmental
+        justice concerns, Overbrook Environmental Education Center, Philadelphia
+      date: 2023
+    - name: Expert advisor, indoor air quality and healthy clean-energy retrofits in public housing for Metro IAF,
+        a large coalition of community-based organizations in NYC
+      date: 2021-2023
+    - name: Expert advisor, COVID-19 risk management for two networks of faith communities in rural Virginia and
+        urban Pennsylvania, USA
+      date: 2020-2022
+    - name: Expert advisor, Data analysis tracking migrant families separated at the US-Mexico border for a major
+        NGO
+      date: 2018
+    - name: Board Chair, Circle Venture, not-for-profit organization supporting environmental and equity initiatives
+        in Philadelphia, Pennsylvania
+      date: 2010-2012
     'Presentations: Invited Seminars/Presentations':
     - name: Neighborhood heterogeneity in heat mortality across the Americas. Extreme Weather and Urban Health Webinar
         Series, Drexel Research Center on Extreme Weather and Urban Health, Drexel University, Philadelphia, PA.
@@ -1756,79 +1830,5 @@ cv:
     - name: Spatial patterns of initial drug use among intravenous drug users in Baltimore, MD (Poster). Geographic
         Information Systems Day, Johns Hopkins Bloomberg School of Public Health, Baltimore, MD.
       date: 2014
-    Academic Service:
-    - name: Drexel University Council on Core Competencies
-      date: 2026-present
-      institution: Drexel University, Philadelphia, PA
-    - name: Faculty Advisor, Public Health Doctoral Student Advisory Group
-      date: 2024-present
-      institution: Drexel University, Philadelphia, PA
-    - name: Committee, PhD Program in Environmental and Occupational Health
-      date: 2023-present
-      institution: Drexel University, Philadelphia, PA
-    - name: Department Representative (Environmental and Occupational Health), Executive Committee of Faculty, Dornsife
-        School of Public Health
-      date: 2023-present
-      institution: Drexel University, Philadelphia, PA
-    - name: Committee, MS Program in Environmental and Occupational Health
-      date: 2023-2024
-      institution: Drexel University, Philadelphia, PA
-    - name: Founder & co-leader, Climate Change and Health Equity Working Group
-      date: 2022-2024
-      institution: Drexel University, Philadelphia, PA
-    - name: Faculty Advisory Board, Public Health Doctoral Student Advisory Group
-      date: 2022-2024
-      institution: Drexel University, Philadelphia, PA
-    - name: Planning committee, Global Non-Communicable Diseases Symposium
-      date: 2018
-      institution: Johns Hopkins University, Baltimore, MD
-    - name: Planning committee, Global Non-Communicable Diseases Symposium
-      date: 2017
-      institution: Johns Hopkins University, Baltimore, MD
-    - name: Co-founder, Refuel Our Future, student group advocating for University fossil fuel divestment
-      date: 2012-2013
-      institution: Johns Hopkins University, Baltimore, MD
-    - name: Student Representative, Save Darfur Coalition
-      date: 2006-2008
-      institution: George Mason University, Fairfax, VA
-    - name: Vice President (elected), Society for Black Students’ Concerns
-      date: 2004-2005
-      institution: Northern Virginia Community College, Annandale, VA
-    Community Service:
-    - name: Expert reviewer, City of Philadelphia, Environmental Justice Mapping Tool
-      date: 2026
-    - name: Expert advisor, City of Boston, Streets Cabinet, street lighting and safety
-      date: 2025-present
-    - name: Expert reviewer, City of Philadelphia, Heat Vulnerability Assessment
-      date: 2025
-    - name: Educational programming on heat and health for local youth, Esperanza, community-based organization
-        in North Philly. Philadelphia, PA.
-      date: 2025
-    - name: Invited speaker, Philadelphia Climate Justice Collective Town Hall.
-      date: 2025
-    - name: Advise local environmental justice group on surveying and advocating for community-identified environmental
-        justice concerns, Overbrook Environmental Education Center, Philadelphia
-      date: 2023
-    - name: Expert advisor, indoor air quality and healthy clean-energy retrofits in public housing for Metro IAF,
-        a large coalition of community-based organizations in NYC
-      date: 2021-2023
-    - name: Expert advisor, COVID-19 risk management for two networks of faith communities in rural Virginia and
-        urban Pennsylvania, USA
-      date: 2020-2022
-    - name: Expert advisor, Data analysis tracking migrant families separated at the US-Mexico border for a major
-        NGO
-      date: 2018
-    - name: Board Chair, Circle Venture, not-for-profit organization supporting environmental and equity initiatives
-        in Philadelphia, Pennsylvania
-      date: 2010-2012
-    Skills and Certifications:
-    - name: Spanish – Professional working proficiency
-      group: Languages
-    - name: Certified in Public Health (CPH), National Board of Public Health Examiners
-      date: 2013-present
-      group: Certifications
-    - name: Group Facilitation Certification, Latino Commission on AIDS
-      date: 2010
-      group: Certifications
 design:
   theme: classic

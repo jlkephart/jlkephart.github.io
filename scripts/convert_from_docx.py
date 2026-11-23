@@ -115,7 +115,7 @@ for r in tree["ACADEMIC & PROFESSIONAL EXPERIENCE"][None]:
     e = {"position": pos, "company": org, "start_date": int(s)}
     e["end_date"] = (e_ if e_ == "present" else int(e_)) if e_ else int(s)
     exp.append(e)
-cv_sections["Academic and Professional Experience"] = exp
+cv_sections["Professional Experience"] = exp
 
 # Honors
 cv_sections["Honors and Awards"] = normal_entries(tree["HONORS AND AWARDS"][None])

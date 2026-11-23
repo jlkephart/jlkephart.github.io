@@ -174,7 +174,7 @@ if "Education" in S:
         "details": SUBLINE.join([e["institution"] + (f" ({e['area']})" if e.get("area") else "")]
                                 + list(e.get("highlights") or [])),
     } for e in S["Education"]]
-EXP = "Academic and Professional Experience"
+EXP = "Professional Experience"
 if EXP in S:
     S[EXP] = [{"label": f"{e.get('start_date', '')}-{e.get('end_date', '')}".strip("-"),
                "details": f"{e['position']}, {e['company']}"} for e in S[EXP]]
