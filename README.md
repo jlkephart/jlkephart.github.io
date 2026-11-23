@@ -14,7 +14,8 @@ On every push to `main`, the GitHub Action in `.github/workflows/publish.yml`:
 ### Conventions in `cv.yml`
 
 - `**Kephart JL**` bolds the PI; a trailing `\*` marks co-first/co-senior authorship.
-- `mentees: "Xu J; Jardel H"` underlines those authors as lab trainees on the website.
+- `mentees: "Xu J; Jardel H"` underlines those authors as trainees (mentored at first submission) on the website.
+- `co_first_or_senior: "yes"` is set only when an author carries the `*` marker.
 - People page: anyone under the PI-led mentoring sections whose date ends in `present` is listed as a current
   member; everyone else is an alumnus. Edit `LAB_SECTIONS` in `scripts/build_pages.py` to change which sections count.
 

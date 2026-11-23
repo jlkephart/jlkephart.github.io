@@ -114,7 +114,6 @@ cv:
       - Western B
       journal: Nature Communications (in press)
       date: 2026
-      co_first_or_senior: 'yes'
     - title: Heterogeneity in Flood Hazard Exposure in 363 Latin American Cities
       authors:
       - Xu J
@@ -133,7 +132,6 @@ cv:
       journal: Ecosystem Health and Sustainability
       date: 2026
       mentees: Xu J
-      co_first_or_senior: 'yes'
     - title: Ambient temperature and homicide mortality in 307 Latin American cities
       authors:
       - Lopes de Moraes S
@@ -157,7 +155,6 @@ cv:
       journal: Environmental Research
       date: 2026
       mentees: Rangel Moreno K
-      co_first_or_senior: 'yes'
     - title: Disentangling climate hazards from demographic change in climate-health projections
       authors:
       - '**Kephart JL**'
@@ -165,7 +162,6 @@ cv:
       doi: 10.1038/s41591-025-04120-9
       journal: Nature Medicine
       date: 2026
-      co_first_or_senior: 'yes'
     - title: 'Cooking with liquefied petroleum gas or biomass and quality of life: Results from a randomized controlled
         trial'
       authors:
@@ -186,7 +182,6 @@ cv:
       doi: 10.1155/ina/9936046
       journal: Indoor Air
       date: 2026
-      co_first_or_senior: 'yes'
     - title: Urban and Socioeconomic Disparities in PM2.5 Exposure Across 340 Latin American Cities
       authors:
       - Ascencio EJ
@@ -203,7 +198,6 @@ cv:
       doi: 10.1088/1748-9326/ae20a4
       journal: Environmental Research Letters
       date: 2025
-      co_first_or_senior: 'yes'
     - title: Dietary polyphenols and inflammatory markers in rural adult women in Puno, Peru
       authors:
       - Laveriano EP
@@ -222,7 +216,6 @@ cv:
       doi: 10.1016/j.tjnut.2025.10.008
       journal: The Journal of Nutrition
       date: 2025
-      co_first_or_senior: 'yes'
     - title: Voucher-based liquefied petroleum gas subsidies achieve nearly exclusive clean fuel use when affordable
         delivery is available
       authors:
@@ -238,7 +231,6 @@ cv:
       doi: 10.1016/j.esd.2025.101820
       journal: Energy for Sustainable Development
       date: 2025
-      co_first_or_senior: 'yes'
     - title: Future temperature-related mortality in Latin American cities under climate change and population scenarios
       authors:
       - '**Kephart JL**\*'
@@ -276,7 +268,6 @@ cv:
       doi: 10.1038/s44284-025-00279-x
       journal: Nature Cities
       date: 2025
-      co_first_or_senior: 'yes'
     - title: Social disparities in neighborhood flood exposure in 44,698 urban neighborhoods in Latin America
       authors:
       - '**Kephart JL**'
@@ -295,7 +286,6 @@ cv:
       journal: Nature Cities
       date: 2025
       mentees: Rangel Moreno K; Shingara E
-      co_first_or_senior: 'yes'
     - title: Projected changes in heatwaves over Central and South America using high-resolution regional climate
         simulations
       authors:
@@ -314,7 +304,6 @@ cv:
       doi: 10.1038/s41598-024-73521-6
       journal: Scientific Reports
       date: 2024
-      co_first_or_senior: 'yes'
     - title: 'Climate hazards in Latin American cities: Understanding the role of the social and built environments
         and barriers to adaptation action'
       authors:
@@ -332,7 +321,6 @@ cv:
       doi: 10.1016/j.crm.2024.100625
       journal: Climate Risk Management
       date: 2024
-      co_first_or_senior: 'yes'
     - title: Short-term associations between fine particulate air pollution and cardiovascular and respiratory mortality
         in 337 cities in Latin America
       authors:
@@ -349,7 +337,6 @@ cv:
       doi: 10.1016/j.scitotenv.2024.171073
       journal: Science of the Total Environment
       date: 2024
-      co_first_or_senior: 'yes'
     - title: Tackling heat-related mortality in aging populations
       authors:
       - '**Kephart JL**'
@@ -357,7 +344,6 @@ cv:
       doi: 10.1038/s41591-024-02919-6
       journal: Nature Medicine
       date: 2024
-      co_first_or_senior: 'yes'
     - title: Adolescent mental distress in the wake of climate disasters
       authors:
       - Auchincloss AH
@@ -367,7 +353,6 @@ cv:
       doi: 10.1016/j.pmedr.2024.102651
       journal: Preventive Medicine Reports
       date: 2024
-      co_first_or_senior: 'yes'
       summary: Media coverage by TIME, HealthDay, and Tech Times
     - title: 'Ambient nitrogen dioxide in 47,187 neighborhoods across 326 cities in eight Latin American countries:
         population exposures and associations with urban features'
@@ -384,7 +369,6 @@ cv:
       doi: 10.1016/S2542-5196(23)00237-1
       journal: The Lancet Planetary Health
       date: 2023
-      co_first_or_senior: 'yes'
     - title: 'Greenness and excess deaths from heat in 323 Latin American cities: Do associations vary according
         to climate zone or green space configuration?'
       authors:
@@ -403,7 +387,6 @@ cv:
       doi: 10.1016/j.envint.2023.108230
       journal: Environment International
       date: 2023
-      co_first_or_senior: 'yes'
     - title: 'Testing the effectiveness of household fuel conservation strategies: Policy implications for increasing
         the affordability of exclusive clean cooking'
       authors:
@@ -416,7 +399,6 @@ cv:
       doi: 10.1016/j.envint.2023.108223
       journal: Environment International
       date: 2023
-      co_first_or_senior: 'yes'
     - title: 'Effects of a household air pollution intervention using liquefied petroleum gas stoves, continuous
         fuel distribution and behavioral messaging on dietary and sodium intake of adult women in Puno, Peru: A
         randomized controlled trial'
@@ -433,7 +415,6 @@ cv:
       doi: 10.1017/S1368980023000320
       journal: Public Health Nutrition
       date: 2023
-      co_first_or_senior: 'yes'
     - title: Sustained use of liquefied petroleum gas following one year of free fuel and behavioral support in
         Puno, Peru
       authors:
@@ -447,7 +428,6 @@ cv:
       doi: 10.1016/j.esd.2023.01.005
       journal: Energy for Sustainable Development
       date: 2023
-      co_first_or_senior: 'yes'
     - title: Modification of temperature-related human mortality by area-level socioeconomic and demographic characteristics
         in Latin American cities
       authors:
@@ -467,14 +447,12 @@ cv:
       doi: 10.1016/j.socscimed.2022.115526
       journal: Social Science and Medicine
       date: 2023
-      co_first_or_senior: 'yes'
     - title: Rise in ambient temperature is associated with increased mortality in Latin America
       authors:
       - '**Kephart JL**'
       doi: 10.1038/s41591-022-01893-1
       journal: Nature Medicine
       date: 2022
-      co_first_or_senior: 'yes'
     - title: City-level impact of extreme temperatures and mortality in Latin America
       authors:
       - '**Kephart JL**'
@@ -492,7 +470,6 @@ cv:
       doi: 10.1038/s41591-022-01872-6
       journal: Nature Medicine
       date: 2022
-      co_first_or_senior: 'yes'
       summary: Media coverage by Science News, BBC News World Service, Nature News and multiple major news outlets
         in Latin America.
     - title: 'Household air pollution concentrations after liquefied petroleum gas interventions in rural Peru:
@@ -528,7 +505,6 @@ cv:
       doi: 10.1016/j.envint.2022.107412
       journal: Environment International
       date: 2022
-      co_first_or_senior: 'yes'
     - title: 'The effect of population mobility on COVID-19 incidence in 314 Latin American cities: a longitudinal
         ecological study with mobile phone location data'
       authors:
@@ -544,7 +520,6 @@ cv:
       doi: 10.1016/S2589-7500(21)00174-6
       journal: The Lancet Digital Health
       date: 2021
-      co_first_or_senior: 'yes'
       summary: Cited in the CDC COVID-19 Science Update (Edition 104) and in two articles from a major news outlet
         in Argentina.
     - title: COVID-19, ambient air pollution, and environmental health inequities in Latin American cities
@@ -558,7 +533,6 @@ cv:
       doi: 10.1007/s11524-020-00509-8
       journal: Journal of Urban Health
       date: 2021
-      co_first_or_senior: 'yes'
     - title: 'Ambient fine particulate matter in Latin American cities: levels, population exposure, and associated
         urban factors'
       authors:
@@ -576,7 +550,6 @@ cv:
       doi: 10.1016/j.scitotenv.2021.145035
       journal: Science of the Total Environment
       date: 2021
-      co_first_or_senior: 'yes'
     - title: Nitrogen dioxide exposures from LPG stoves in a cleaner-cooking intervention trial
       authors:
       - '**Kephart JL**'
@@ -593,7 +566,6 @@ cv:
       doi: 10.1016/j.envint.2020.106196
       journal: Environment International
       date: 2021
-      co_first_or_senior: 'yes'
     - title: 'Effects of a Household Air Pollution Intervention with Liquefied Petroleum Gas on Cardiopulmonary
         Outcomes in Peru: A Randomized Controlled Trial'
       authors:
@@ -617,7 +589,6 @@ cv:
       doi: 10.1164/rccm.202006-2319OC
       journal: American Journal of Respiratory and Critical Care Medicine
       date: 2021
-      co_first_or_senior: 'yes'
     - title: 'Household air pollution and blood markers of inflammation: a cross-sectional analysis'
       authors:
       - Fandiño-Del-Rio M
@@ -631,7 +602,6 @@ cv:
       doi: 10.1111/ina.12814
       journal: Indoor Air
       date: 2021
-      co_first_or_senior: 'yes'
     - title: 'Indoor air pollution concentrations and cardiometabolic health across four diverse settings in Peru:
         a cross-sectional study'
       authors:
@@ -645,7 +615,6 @@ cv:
       doi: 10.1186/s12940-020-00612-y
       journal: Environmental Health
       date: 2020
-      co_first_or_senior: 'yes'
     - title: Nitrogen dioxide exposures from biomass cookstoves in the Peruvian Andes
       authors:
       - '**Kephart JL**'
@@ -661,7 +630,6 @@ cv:
       doi: 10.1111/ina.12653
       journal: Indoor Air
       date: 2020
-      co_first_or_senior: 'yes'
     - title: 'Exploring the impact of a liquefied petroleum gas intervention on time use in rural Peru: A mixed
         methods study on perceptions, use, and implications of time savings'
       authors:
@@ -676,7 +644,6 @@ cv:
       doi: 10.1016/j.envint.2020.105932
       journal: Environment International
       date: 2020
-      co_first_or_senior: 'yes'
     - title: 'Beyond cost: Exploring fuel choices and the socio-cultural dynamics of liquefied petroleum gas stove
         adoption in Peru'
       authors:
@@ -691,7 +658,6 @@ cv:
       doi: 10.1016/j.erss.2020.101591
       journal: Energy Research and Social Science
       date: 2020
-      co_first_or_senior: 'yes'
     - title: 'Use of liquefied petroleum gas in Puno, Peru: Fuel needs under conditions of free fuel and near-exclusive
         use'
       authors:
@@ -706,7 +672,6 @@ cv:
       doi: 10.1016/j.esd.2020.07.011
       journal: Energy for Sustainable Development
       date: 2020
-      co_first_or_senior: 'yes'
     - title: Household air pollution exposure and associations with household characteristics among biomass cookstove
         users in Puno, Peru
       authors:
@@ -720,7 +685,6 @@ cv:
       doi: 10.1016/j.envres.2020.110028
       journal: Environmental Research
       date: 2020
-      co_first_or_senior: 'yes'
     - title: Comparison of next-generation portable pollution monitors to measure exposure to PM2.5 from household
         air pollution in Puno, Peru
       authors:
@@ -735,7 +699,6 @@ cv:
       doi: 10.1111/ina.12638
       journal: Indoor Air
       date: 2020
-      co_first_or_senior: 'yes'
     - title: An evaluation of the Fondo de Inclusión Social Energético program to promote access to liquefied petroleum
         gas in Peru
       authors:
@@ -753,7 +716,6 @@ cv:
       doi: 10.1016/j.esd.2018.06.001
       journal: Energy for Sustainable Development
       date: 2018
-      co_first_or_senior: 'yes'
     - title: 'Effects of a liquefied petroleum gas stove intervention on pollutant exposure and adult cardiopulmonary
         outcomes (CHAP): study protocol for a randomized controlled trial'
       authors:
@@ -775,7 +737,6 @@ cv:
       doi: 10.1186/s13063-017-2179-x
       journal: Trials
       date: 2017
-      co_first_or_senior: 'yes'
     Manuscripts Under Review:
     - title: Indoor temperature in dwellings and its association with cardiovascular and respiratory health in the
         general population. A scoping review to inform potential adaptation measures for climate change
@@ -807,7 +768,6 @@ cv:
       - Diez Roux AV
       - Rodríguez DA
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: A multi-country analysis of floods and mortality in 343 Latin American cities, with modification by
         age, sex, and cause of death
       authors:
@@ -835,7 +795,7 @@ cv:
       - Sheffield P
       - Clougherty J
       journal: Under review
-      co_first_or_senior: 'yes'
+      mentees: Frueh L
     - title: Ambient temperature and leisure and transportation physical activity in Latin American cities
       authors:
       - Magalhães A
@@ -854,7 +814,6 @@ cv:
       - Diez Roux AV
       - Caiaffa WT
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: Rain after dry spells and road traffic deaths across diverse urban settings in Latin America
       authors:
       - Hsu CK
@@ -872,7 +831,6 @@ cv:
       - Diez Roux AV
       - Rodriguez DA
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: Spatiotemporal trends of precipitation extremes in 353 Latin American cities
       authors:
       - Lopes de Moraes S
@@ -886,7 +844,6 @@ cv:
       - Diez Roux AV
       - Gouveia N
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: 'Hospitalizations attributable to heat and cold in 327 Latin American cities, 2000–2024: a multi-city
         time-series study'
       authors:
@@ -908,7 +865,6 @@ cv:
       - Diez Roux AV
       - and the SALURBAL Group
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: 'Urban heat island intensity in Latin America: Annual trends, seasonal dynamics, and between-city variability
         (2001–2020)'
       authors:
@@ -929,7 +885,6 @@ cv:
       - the SALURBAL Group
       journal: Under review
       mentees: Xu J
-      co_first_or_senior: 'yes'
     - title: The burden of global flood exposure on a healthy life expectancy
       authors:
       - Mei Q
@@ -944,7 +899,6 @@ cv:
       - Cao Y
       - '**Kephart JL**'
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: Heatwave distribution, trends, and associations with urban characteristics in 371 Latin American cities
       authors:
       - Lopes de Moraes S
@@ -966,7 +920,6 @@ cv:
       - Rodriguez DA
       - the SALURBAL Group
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: Drivers of neighborhood differences in heat-related mortality across five cities in the Americas
       authors:
       - '**Kephart JL**\*'
@@ -1002,7 +955,6 @@ cv:
       - '**Kephart JL**'
       journal: Under review
       mentees: Figueroa JC; Jardel H; Xu J
-      co_first_or_senior: 'yes'
     - title: Housing building materials as effect modifiers of the temperature-cardiovascular mortality associations
         in Mexican urban municipalities.
       authors:
@@ -1015,7 +967,6 @@ cv:
       - Pérez-Ferrer C
       journal: Under review
       mentees: Jimenez-Ortiz CM
-      co_first_or_senior: 'yes'
     - title: 'Effects of cooking with liquefied petroleum gas or biomass on lung function in adult Peruvian women:
         A randomized controlled trial'
       authors:
@@ -1030,7 +981,6 @@ cv:
       - Koehler K
       - Checkley W
       journal: Under review
-      co_first_or_senior: 'yes'
     - title: Non-optimal temperature and diabetes mellitus mortality in 329 Latin American cities
       authors:
       - Rangel-Moreno K
@@ -1049,7 +999,6 @@ cv:
       - Barrientos-Gutiérrez T
       journal: Under review
       mentees: Rangel-Moreno K
-      co_first_or_senior: 'yes'
     Briefs and Outreach:
     - bullet: 'Schnake-Mahl A, Kephart JL, Quistberg DA. The Health Benefits That Could Have Been: The Case of New
         York City’s Congestion Pricing. Hot Topics in Urban Policy and Health, Drexel Urban Health Collaborative.
